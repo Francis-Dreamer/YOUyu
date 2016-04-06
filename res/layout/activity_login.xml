@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/denglubeijing"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px96" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/px30"
+                android:paddingRight="@dimen/px30"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/tel"
+            android:layout_width="@dimen/px441"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px230"
+            android:background="@null"
+            android:hint="手机"
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:textColor="#4C4C4C"
+            android:textSize="@dimen/px27" />
+
+        <ImageView
+            android:id="@+id/hengxian1"
+            android:layout_width="@dimen/px441"
+            android:layout_height="@dimen/px1"
+            android:layout_below="@id/tel"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/hengxiantiao" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="@dimen/px441"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hengxian1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px40"
+            android:background="@null"
+            android:hint="密码"
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:textColor="#4C4C4C"
+            android:textSize="@dimen/px27" />
+
+        <ImageView
+            android:id="@+id/hengxian2"
+            android:layout_width="@dimen/px441"
+            android:layout_height="@dimen/px1"
+            android:layout_below="@id/password"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/hengxiantiao" />
+
+        <TextView
+            android:id="@+id/forgetpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/hengxian2"
+            android:layout_below="@id/hengxian2"
+            android:clickable="true"
+            android:paddingBottom="@dimen/px15"
+            android:paddingLeft="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:text="忘记密码?"
+            android:textColor="#333333"
+            android:textSize="@dimen/px21" />
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hengxian2"
+            android:layout_marginLeft="@dimen/px200"
+            android:layout_marginTop="@dimen/px102"
+            android:clickable="true"
+            android:padding="@dimen/px15"
+            android:text="立即注册"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/px24" />
+
+        <TextView
+            android:id="@+id/login_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/hengxian2"
+            android:layout_marginRight="@dimen/px200"
+            android:layout_marginTop="@dimen/px102"
+            android:clickable="true"
+            android:padding="@dimen/px15"
+            android:text="账号登录"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/px24" />
+
+        <TextView
+            android:id="@+id/cooperative_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hengxian2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px260"
+            android:clickable="true"
+            android:padding="@dimen/px15"
+            android:text="合作账号登录"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/px24" />
+
+        <ImageView
+            android:id="@+id/login_qq"
+            android:layout_width="@dimen/px84"
+            android:layout_height="@dimen/px84"
+            android:layout_below="@id/cooperative_account"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/px107"
+            android:src="@drawable/qq" />
+
+        <ImageView
+            android:id="@+id/login_weibo"
+            android:layout_width="@dimen/px84"
+            android:layout_height="@dimen/px84"
+            android:layout_below="@id/cooperative_account"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="@dimen/px111"
+            android:layout_marginTop="@dimen/px107"
+            android:layout_toLeftOf="@id/login_qq"
+            android:src="@drawable/weibo" />
+
+        <ImageView
+            android:id="@+id/login_weixin"
+            android:layout_width="@dimen/px84"
+            android:layout_height="@dimen/px84"
+            android:layout_below="@id/cooperative_account"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/px111"
+            android:layout_marginTop="@dimen/px107"
+            android:layout_toRightOf="@id/login_qq"
+            android:src="@drawable/weixin" />
+    </RelativeLayout>
+
+</LinearLayout>
