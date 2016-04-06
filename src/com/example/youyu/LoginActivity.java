@@ -1,13 +1,16 @@
-package com.example.swimyu;
+package com.example.youyu;
+
+import com.example.swimyu.R;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class TanActivity extends Activity {
+public class LoginActivity extends Activity{
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_tan);
+		setContentView(R.layout.activity_login);
 	}
 }

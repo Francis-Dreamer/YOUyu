@@ -1,7 +1,9 @@
-package com.example.swimyu;
+package com.example.youyu;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.example.swimyu.R;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_menu" />
+
+    <RadioGroup
+        android:id="@+id/rg_nao_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbtn_nao_eat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:gravity="center_horizontal"
+            android:text="吃" />
+
+        <RadioButton
+            android:id="@+id/rbtn_nao_dreak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:gravity="center_horizontal"
+            android:text="喝" />
+
+        <RadioButton
+            android:id="@+id/rbtn_nao_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:gravity="center_horizontal"
+            android:text="玩" />
+
+        <RadioButton
+            android:id="@+id/rbtn_nao_happy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:gravity="center_horizontal"
+            android:text="乐" />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/lv_nao_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
