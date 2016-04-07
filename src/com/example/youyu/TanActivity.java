@@ -1,6 +1,6 @@
 package com.example.youyu;
 
-import com.example.swimyu.R;
+import com.example.youyu.R;
 
 import android.app.Activity;
 import android.os.Bundle;

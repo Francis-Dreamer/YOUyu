@@ -3,7 +3,7 @@ package com.example.youyu;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.swimyu.R;
+import com.example.youyu.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -77,7 +77,7 @@ public class GuidePageActivity extends Activity {
 	 * 点击跳转到登录页
 	 */
 	private void GoToMainActivity() {
-		Intent intent = new Intent(GuidePageActivity.this, MainActivity.class);
+		Intent intent = new Intent(GuidePageActivity.this, LoginActivity.class);
 		startActivity(intent);
 		finish();
 	}
