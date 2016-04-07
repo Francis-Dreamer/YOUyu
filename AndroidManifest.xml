@@ -18,7 +18,13 @@
             android:label="@string/app_name" >
         </activity>
         <activity android:name="com.example.youyu.TanActivity" >
-            <intent-filter>
+        </activity>
+        <activity android:name="com.example.youyu.OldTimeyActivity" >
+        </activity>
+        <activity android:name="com.example.youyu.GuidePageActivity" >
+        </activity>
+        <activity android:name="com.example.youyu.YuActivity" >
+             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

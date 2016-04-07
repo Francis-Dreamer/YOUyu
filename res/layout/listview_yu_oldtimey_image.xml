@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/this_month_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/furongdong" />
+
+        <TextView
+            android:id="@+id/image_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/this_month_image"
+            android:layout_alignRight="@id/this_month_image"
+            android:alpha="0.5"
+            android:layout_alignParentBottom="true"
+            android:background="#050505"
+            android:text="芙蓉洞"
+            android:padding="@dimen/px10"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/px24" />
+    </RelativeLayout>
+
+</LinearLayout>
