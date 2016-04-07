@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px15"
+        android:paddingTop="@dimen/px15" >
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/px10"
+            android:drawableTop="@drawable/yu"
+            android:gravity="center"
+            android:text="@string/yu"
+            android:textColor="@color/textcolor_tittle"
+            android:textSize="@dimen/px30" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/px10"
+            android:drawableTop="@drawable/nao"
+            android:gravity="center"
+            android:text="@string/nao"
+            android:textColor="@color/textcolor_tittle"
+            android:textSize="@dimen/px30" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="@dimen/px10"
+            android:drawableTop="@drawable/tan"
+            android:gravity="center"
+            android:text="@string/tan"
+            android:textColor="@color/textcolor_tittle"
+            android:textSize="@dimen/px30" />
+    </RadioGroup>
+
+</LinearLayout>

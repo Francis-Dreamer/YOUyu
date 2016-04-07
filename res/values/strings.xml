@@ -4,5 +4,9 @@
     <string name="app_name">SwimYu</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="yu">渝</string>
+    <string name="nao">闹</string>
+    <string name="tan">探</string>
+    <string name="title">标题</string>
 
 </resources>

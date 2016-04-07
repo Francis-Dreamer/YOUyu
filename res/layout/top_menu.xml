@@ -6,14 +6,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px20" 
+        android:layout_marginBottom="@dimen/px20">
 
         <ImageView
             android:id="@+id/top_imageview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/px60"
+            android:layout_height="@dimen/px60"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/ic_launcher" />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px30"
+            android:src="@drawable/icon" />
 
         <TextView
             android:id="@+id/top_title"
@@ -21,12 +25,14 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="标题" />
+            android:textColor="@color/textcolor_tittle"
+            android:textSize="@dimen/px36"
+            android:text="@string/title" />
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="#BFBFBF" />
+        android:background="@color/division_gray" />
 
 </LinearLayout>
