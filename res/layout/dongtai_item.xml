@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/image_ciqiko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ciqiko" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_ciqiko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="磁器口" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/image_ciqikoyonghutouxiang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ciqikoyonghutouxiang" />
+
+            <TextView
+                android:id="@+id/text_yonghu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="美丽的人生" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_biaoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="我在这里带走的文化与历史" />
+
+        <TextView
+            android:id="@+id/text_leirong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="磁器口，一个古风古韵的地方，这里除了繁华的街景还有" />
+    </LinearLayout>
+
+</LinearLayout>
