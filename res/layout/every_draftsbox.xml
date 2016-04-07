@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <TextView
+        android:id="@+id/draftboxs_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginTop="@dimen/px21"
+        android:text="草稿箱标题"
+        android:textColor="#0099ff"
+        android:textSize="@dimen/px21" />
+
+    <ImageView
+        android:id="@+id/draftboxs_pic"
+        android:layout_width="@dimen/px106"
+        android:layout_height="@dimen/px106"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/px18"
+        android:layout_marginRight="@dimen/px30"
+        android:layout_marginTop="@dimen/px21"
+        android:scaleType="fitXY"
+        android:src="@drawable/yangrenyangren" />
+
+    <TextView
+        android:id="@+id/draftboxs_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/draftboxs_title"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_toLeftOf="@id/draftboxs_pic"
+        android:text="草稿箱内容"
+        android:textColor="#999999"
+        android:textSize="@dimen/px18" />
+
+    <TextView
+        android:id="@+id/draftboxs_time"
+        android:layout_width="wrap_content"
+        android:textColor="#bfbfbf"
+        android:textSize="@dimen/px18"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/draftboxs_pic"
+        android:layout_marginRight="@dimen/px21"
+        android:layout_alignBottom="@id/draftboxs_pic"
+        android:text="草稿箱时间" />
+
+    <View
+        android:id="@+id/fenge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_below="@id/draftboxs_pic"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginRight="@dimen/px30"
+        android:layout_marginBottom="@dimen/px15"
+        android:background="#999999" />
+
+</RelativeLayout>

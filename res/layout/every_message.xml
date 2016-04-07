@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <TextView
+        android:id="@+id/message_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px66"
+        android:layout_marginTop="@dimen/px36"
+        android:text="消息来源"
+        android:textColor="#0099ff"
+        android:textSize="@dimen/px20" />
+
+    <TextView
+        android:id="@+id/do_what"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px5"
+        android:layout_marginTop="@dimen/px36"
+        android:layout_toRightOf="@id/message_source"
+        android:text="回复/评论"
+        android:textColor="#4c4c4c"
+        android:textSize="@dimen/px21" />
+
+    <TextView
+        android:id="@+id/reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/px30"
+        android:layout_marginTop="@dimen/px18"
+        android:padding="@dimen/px18"
+        android:text="回复"
+        android:textColor="#0099ff"
+        android:textSize="@dimen/px20" />
+
+    <TextView
+        android:id="@+id/message_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_source"
+        android:layout_marginLeft="@dimen/px66"
+        android:layout_marginTop="@dimen/px12"
+        android:text="消息内容"
+        android:textColor="#4c4c4c"
+        android:textSize="@dimen/px21" />
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/message_content"
+        android:layout_marginBottom="@dimen/px21"
+        android:layout_marginRight="@dimen/px48"
+        android:layout_marginTop="@dimen/px10"
+        android:text="消息时间"
+        android:textColor="#bfbfbf"
+        android:textSize="@dimen/px18" />
+
+    <View
+        android:id="@+id/fenge"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px1"
+        android:layout_below="@id/message_time"
+        android:layout_marginBottom="@dimen/px15"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginRight="@dimen/px30"
+        android:background="#999999" />
+
+</RelativeLayout>

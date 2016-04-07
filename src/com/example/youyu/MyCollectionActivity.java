@@ -1,14 +1,17 @@
 package com.example.youyu;
 
 import java.util.List;
-
 import com.example.youyu.adapter.MyCollectionAdapter;
 import com.example.youyu.model.MyCollectionModel;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+/**
+ * 我的收藏
+ * @author Administrator
+ *
+ */
 public class MyCollectionActivity extends Activity{
 
 	List<MyCollectionModel> data;
