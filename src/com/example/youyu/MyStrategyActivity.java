@@ -1,14 +1,17 @@
 package com.example.youyu;
 
 import java.util.List;
-
 import com.example.youyu.adapter.MyStrategyAdapter;
 import com.example.youyu.model.MyStrategyModel;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+/**
+ * 我的攻略
+ * @author Administrator
+ *
+ */
 public class MyStrategyActivity extends Activity{
 
 	List<MyStrategyModel> data;

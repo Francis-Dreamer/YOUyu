@@ -5,6 +5,7 @@ import java.util.List;
 import com.example.youyu.R;
 import com.example.youyu.model.MyStrategyModel;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,7 @@ public class MyStrategyAdapter extends BaseAdapter{
 		return position;
 	}
 
-	public View getView(int position, View convertView, ViewGroup parent) {
+	@SuppressLint("InflateParams") public View getView(int position, View convertView, ViewGroup parent) {
 	
 		ViewHolder holder;
 		if(convertView==null){

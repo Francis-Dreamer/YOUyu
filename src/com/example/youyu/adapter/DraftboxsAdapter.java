@@ -3,7 +3,7 @@ package com.example.youyu.adapter;
 import java.util.List;
 
 import com.example.youyu.R;
-import com.example.youyu.model.MyCollectionModel;
+import com.example.youyu.model.DraftboxsModel;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,27 +14,26 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MyCollectionAdapter extends BaseAdapter{
+public class DraftboxsAdapter extends BaseAdapter{
 
-	List<MyCollectionModel> data;
+	List<DraftboxsModel> data;
 	Context context;
 	LayoutInflater inflater;
 	
-	public MyCollectionAdapter(){
+	public DraftboxsAdapter(){
 		
 	}
 	
-	public MyCollectionAdapter(List<MyCollectionModel> data,Context context){
+	public DraftboxsAdapter(List<DraftboxsModel> data,Context context){
 		this.data=data;
 		this.context=context;
 		inflater=LayoutInflater.from(context);
 	}
 	
-	public void setData(List<MyCollectionModel> data){
+	public void setData(List<DraftboxsModel> data){
 		this.data=data;
 		this.notifyDataSetChanged();
 	}
-	
 	
 	public int getCount() {
 		if(data!=null){
@@ -56,22 +55,21 @@ public class MyCollectionAdapter extends BaseAdapter{
 		ViewHolder holder;
 		if(convertView==null){
 			holder=new ViewHolder();
-			convertView=inflater.inflate(R.layout.every_mycollection, null);
-			holder.title=(TextView) convertView.findViewById(R.id.collection_title);
-			holder.content=(TextView) convertView.findViewById(R.id.collection_content);
-			holder.time=(TextView) convertView.findViewById(R.id.collection_time);
-			holder.pic1=(ImageView) convertView.findViewById(R.id.pic1);
-			holder.pic2=(ImageView) convertView.findViewById(R.id.pic2);
+			convertView=inflater.inflate(R.layout.every_draftsbox, null);
+			holder.title=(TextView) convertView.findViewById(R.id.draftboxs_title);
+			holder.content=(TextView) convertView.findViewById(R.id.draftboxs_content);
+			holder.time=(TextView) convertView.findViewById(R.id.draftboxs_time);
+			holder.pic=(ImageView) convertView.findViewById(R.id.draftboxs_pic);
 			convertView.setTag(holder);
 		}else{
 			holder=(ViewHolder) convertView.getTag();
 		}
-		MyCollectionModel model=(MyCollectionModel) getItem(position);
+		DraftboxsModel model=(DraftboxsModel) getItem(position);
+		
 		holder.title.setText(model.getTitle());
 		holder.content.setText(model.getContent());
 		holder.time.setText(model.getTime());
-		holder.pic1.setImageResource(Integer.parseInt(model.getPic1()));
-		holder.pic2.setImageResource(Integer.parseInt(model.getPic2()));
+		holder.pic.setImageResource(Integer.parseInt(model.getPic()));
 		
 		return convertView;
 	}
@@ -80,7 +78,6 @@ public class MyCollectionAdapter extends BaseAdapter{
 		TextView title;
 		TextView content;
 		TextView time;
-		ImageView pic1;
-		ImageView pic2;
+		ImageView pic;
 	}
 }

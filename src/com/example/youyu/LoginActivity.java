@@ -6,6 +6,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+/**
+ * 登录
+ * @author Administrator
+ *
+ */
 public class LoginActivity extends Activity{
 
 	@Override
