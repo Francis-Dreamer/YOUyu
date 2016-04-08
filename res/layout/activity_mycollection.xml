@@ -4,9 +4,8 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical" >
-    
 
-     <RelativeLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/px96" >
 
@@ -37,7 +36,8 @@
     <ListView
         android:id="@+id/mycollection_listview"
         android:layout_width="match_parent"
-        android:footerDividersEnabled="false"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:divider="@null" >
     </ListView>
+
 </LinearLayout>

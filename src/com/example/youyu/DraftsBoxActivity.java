@@ -35,6 +35,5 @@ public class DraftsBoxActivity extends Activity{
 		data=DraftboxsModel.getData();
 		adapter=new DraftboxsAdapter(data, this);
 		listView.setAdapter(adapter);
-	
 	}
 }

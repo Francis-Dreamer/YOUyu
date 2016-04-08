@@ -127,8 +127,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/px30"
             android:background="@drawable/selector_set_tuisong"
-            android:button="@null"
-            android:padding="@dimen/px5" />
+            android:button="@null" />
     </RelativeLayout>
 
     <View
@@ -211,11 +210,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/px30"
             android:layout_marginTop="@dimen/px40"
-            android:text="退出登录"
-            android:textSize="@dimen/px32"
+            android:background="@drawable/tuichudenglu"
             android:gravity="center"
+            android:text="退出登录"
             android:textColor="#ffffff"
-            android:background="@drawable/tuichudenglu" />
+            android:textSize="@dimen/px32" />
     </RelativeLayout>
 
 </LinearLayout>

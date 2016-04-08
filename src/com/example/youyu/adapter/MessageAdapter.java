@@ -1,10 +1,9 @@
 package com.example.youyu.adapter;
 
 import java.util.List;
-
 import com.example.youyu.R;
 import com.example.youyu.model.MessageModel;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,9 +48,9 @@ public class MessageAdapter extends BaseAdapter{
 		return position;
 	}
 
-	public View getView(int position, View convertView, ViewGroup parent) {
+	@SuppressLint("InflateParams") public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
-		if(convertView!=null){
+		if(convertView==null){
 			holder=new ViewHolder();
 			convertView=inflater.inflate(R.layout.every_message, null);
 			holder.source=(TextView) convertView.findViewById(R.id.message_source);
