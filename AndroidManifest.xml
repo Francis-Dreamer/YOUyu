@@ -22,6 +22,11 @@
         <activity android:name="com.example.youyu.OldTimeyActivity" >
         </activity>
         <activity android:name="com.example.youyu.GuidePageActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.example.youyu.YuActivity" >
         </activity>
@@ -38,11 +43,6 @@
         <activity android:name="com.example.youyu.DraftsBoxActivity" >
         </activity>
         <activity android:name="com.example.youyu.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.example.youyu.MessageActivity" >
         </activity>

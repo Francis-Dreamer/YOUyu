@@ -48,10 +48,9 @@ public class GuidePageActivity extends Activity {
 		initView();
 		gestureDetector = new GestureDetector(new GuideViewTouch());
 		// 获取分辨率
-		DisplayMetrics dm = new DisplayMetrics();
-		getWindowManager().getDefaultDisplay().getMetrics(dm);
-		flaggingWidth = dm.widthPixels / 3;
-
+//		DisplayMetrics dm = new DisplayMetrics();
+//		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		flaggingWidth = 100;
 	}
 
 	/**
@@ -80,7 +79,6 @@ public class GuidePageActivity extends Activity {
 	private void GoToMainActivity() {
 		Intent intent = new Intent(GuidePageActivity.this, LoginActivity.class);
 		startActivity(intent);
-		finish();
 	}
 
 	/**
