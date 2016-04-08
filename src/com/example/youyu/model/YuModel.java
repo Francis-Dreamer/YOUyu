@@ -1,6 +1,5 @@
 package com.example.youyu.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class YuModel {
@@ -47,12 +46,10 @@ public class YuModel {
 		this.time = time;
 	}
 	public void getData(){
-		list=new ArrayList<YuModel>();
 		YuModel model=new YuModel();
 		model.setText("是否考虑该好好读书卡还给客户给大家看还是感慨");
 		model.setText_name("2016重庆吃货心愿单");
 		model.setText_number("一");
 		model.setWeather("晴");
-		list.add(model);
 	}
 }
