@@ -1,65 +1,64 @@
 package com.example.youyu.baseadapter;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.example.youyu.R;
+import com.example.youyu.adapter.OldTimeGridView;
+import com.example.youyu.baseadapter.OldTimeGridViewBaseAdapter.ViewHolder;
 import com.example.youyu.model.OldTimeYModel;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class OldTimeyBaseAdapter extends BaseExpandableListAdapter {
-	List<OldTimeYModel> oldTimeYModels;
-	Map<String, List<OldTimeYModel>> map;
 	LayoutInflater inflater;
 	Context context;
+	List<OldTimeYModel> list;
+	List<OldTimeYModel> gridList;
 
 	public OldTimeyBaseAdapter() {
 
 	}
 
 	@SuppressWarnings("static-access")
-	public OldTimeyBaseAdapter(List<OldTimeYModel> oldTimeYModels,
-			Context context) {
-		this.oldTimeYModels = oldTimeYModels;
+	public OldTimeyBaseAdapter(List<OldTimeYModel> list, Context context) {
+		this.list = list;
 		this.context = context;
 		inflater = (LayoutInflater) inflater.from(context);
 	}
 
 	@Override
 	public int getGroupCount() {
-		// TODO Auto-generated method stub
-		return oldTimeYModels.size();
+		return list.size();
 	}
 
 	@Override
 	public int getChildrenCount(int groupPosition) {
-		OldTimeYModel key = oldTimeYModels.get(groupPosition);
-		int size = map.get(key).size();
-		return size;
+		return 1;
 	}
 
 	@Override
 	public Object getGroup(int groupPosition) {
-		// TODO Auto-generated method stub
-		return oldTimeYModels.get(groupPosition);
+		return list.get(groupPosition);
 	}
 
 	@Override
 	public Object getChild(int groupPosition, int childPosition) {
-		OldTimeYModel key = oldTimeYModels.get(groupPosition);
-		return (map.get(key).get(childPosition));
+		return 1;
 	}
 
 	@Override
 	public long getGroupId(int groupPosition) {
-		// TODO Auto-generated method stub
 		return groupPosition;
 	}
 
@@ -70,61 +69,73 @@ public class OldTimeyBaseAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public boolean hasStableIds() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
-		OldTimeYModel oldTimeYModel = (OldTimeYModel) oldTimeYModels
-				.get(groupPosition);
 		ViewHolder holder = null;
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = inflater.inflate(R.layout.listview_yu_oldtimey,
-					null);
+			convertView = inflater.inflate(R.layout.listview_yu_oldtimey, null);
 			holder.oldTime_month = (TextView) convertView
 					.findViewById(R.id.old_time_month);
+			holder.oldtime_thismonth = (ImageView) convertView
+					.findViewById(R.id.oldtime_thismonth);
 			convertView.setTag(holder);
 		}
+		OldTimeYModel model = (OldTimeYModel) getGroup(groupPosition);
 		holder = (ViewHolder) convertView.getTag();
-		holder.oldTime_month.setText(oldTimeYModel.getMonth());
+		holder.oldTime_month.setText(model.getMonth());
+		if (isExpanded) {
+			holder.oldtime_thismonth.setImageResource(R.drawable.this_month_xiala);
+		} else {
+			holder.oldtime_thismonth.setImageResource(R.drawable.this_month);
+		}
 		return convertView;
 	}
 
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {
-		OldTimeYModel oldTimeYModel = (OldTimeYModel) oldTimeYModels
-				.get(groupPosition);
-		OldTimeYModel info = map.get(oldTimeYModel).get(childPosition);
 		ViewHolder holder = null;
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = inflater.inflate(R.layout.listview_yu_oldtimey_image,
-					null);
-			holder.imageView = (ImageView) convertView
-					.findViewById(R.id.this_month_image);
-			holder.pic_name = (TextView) convertView
-					.findViewById(R.id.image_text_name);
+			convertView = inflater.inflate(R.layout.gridview_oldtime, null);
+			holder.gridView = (OldTimeGridView) convertView
+					.findViewById(R.id.gridview_oldtime);
 			convertView.setTag(holder);
 		}
+
 		holder = (ViewHolder) convertView.getTag();
-		holder.imageView.setBackgroundResource(info.getPic());
-		holder.pic_name.setText(info.getPic_name());
+		initImage();
+		OldTimeGridViewBaseAdapter adapter = new OldTimeGridViewBaseAdapter(
+				context, gridList);
+		holder.gridView.setAdapter(adapter);
 		return convertView;
 	}
 
 	@Override
 	public boolean isChildSelectable(int groupPosition, int childPosition) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	class ViewHolder {
 		TextView oldTime_month;
-		TextView pic_name;
 		ImageView imageView;
+		TextView pic_name;
+		ImageView oldtime_thismonth;
+		OldTimeGridView gridView;
+	}
+
+	public void initImage() {
+		gridList = new ArrayList<OldTimeYModel>();
+		for (int i = 0; i < 4; i++) {
+			OldTimeYModel model = new OldTimeYModel();
+			model.setPic(R.drawable.xiannvshan);
+			model.setPic_name("仙女山");
+			gridList.add(model);
+		}
 	}
 }

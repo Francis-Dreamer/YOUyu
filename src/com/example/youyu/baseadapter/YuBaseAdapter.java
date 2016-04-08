@@ -5,13 +5,11 @@ import java.util.Date;
 import java.util.List;
 
 import com.example.youyu.R;
-import com.example.youyu.YuActivity;
 import com.example.youyu.model.YuModel;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
