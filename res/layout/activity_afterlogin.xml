@@ -74,7 +74,7 @@
             android:padding="@dimen/px2" >
 
             <ImageView
-                android:id="@+id/morentupian"
+                android:id="@+id/mycollection"
                 android:layout_width="@dimen/px315"
                 android:layout_height="@dimen/px252"
                 android:scaleType="fitXY"
@@ -122,7 +122,7 @@
             android:padding="@dimen/px2" >
 
             <ImageView
-                android:id="@+id/my_tupian"
+                android:id="@+id/mystrategy"
                 android:layout_width="@dimen/px315"
                 android:layout_height="@dimen/px252"
                 android:scaleType="fitXY"
@@ -165,93 +165,109 @@
         android:layout_height="match_parent"
         android:background="#ffffff" >
 
-        <TextView
-            android:id="@+id/drafts_box"
+        <RelativeLayout
+            android:id="@+id/drafts_relativelayout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/px88"
-            android:layout_marginLeft="@dimen/px30"
-            android:gravity="center_vertical"
-            android:text="草稿箱"
-            android:textColor="#999999"
-            android:textSize="@dimen/px32" />
+            android:layout_height="@dimen/px88" >
 
-        <ImageView
-            android:id="@+id/xiangyou1"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/px88"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/px15"
-            android:paddingLeft="@dimen/px15"
-            android:paddingRight="@dimen/px15"
-            android:src="@drawable/youjianjian" />
+            <TextView
+                android:id="@+id/drafts_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="center_vertical"
+                android:text="草稿箱"
+                android:textColor="#999999"
+                android:textSize="@dimen/px32" />
+
+            <ImageView
+                android:id="@+id/xiangyou1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px15"
+                android:paddingLeft="@dimen/px15"
+                android:paddingRight="@dimen/px15"
+                android:src="@drawable/youjianjian" />
+        </RelativeLayout>
 
         <View
             android:id="@+id/fenge1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px1"
-            android:layout_below="@id/drafts_box"
+            android:layout_below="@id/drafts_relativelayout"
             android:layout_marginLeft="@dimen/px30"
             android:layout_marginRight="@dimen/px30"
             android:background="#999999" />
 
-        <TextView
-            android:id="@+id/message"
+        <RelativeLayout
+            android:id="@+id/message_relativelayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px88"
-            android:layout_below="@id/fenge1"
-            android:layout_marginLeft="@dimen/px30"
-            android:gravity="center_vertical"
-            android:text="消息"
-            android:textColor="#999999"
-            android:textSize="@dimen/px32" />
-        
-        <ImageView
-            android:id="@+id/xiangyou2"
-            android:layout_below="@id/fenge1"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/px88"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/px15"
-            android:paddingLeft="@dimen/px15"
-            android:paddingRight="@dimen/px15"
-            android:src="@drawable/youjianjian" />
-        
+            android:layout_below="@id/fenge1" >
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="center_vertical"
+                android:text="消息"
+                android:textColor="#999999"
+                android:textSize="@dimen/px32" />
+
+            <ImageView
+                android:id="@+id/xiangyou2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px15"
+                android:paddingLeft="@dimen/px15"
+                android:paddingRight="@dimen/px15"
+                android:src="@drawable/youjianjian" />
+        </RelativeLayout>
 
         <View
             android:id="@+id/fenge2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px1"
-            android:layout_below="@id/message"
+            android:layout_below="@id/message_relativelayout"
             android:layout_marginLeft="@dimen/px30"
             android:layout_marginRight="@dimen/px30"
             android:background="#999999" />
 
-        <TextView
-            android:id="@+id/more_set"
+        <RelativeLayout
+            android:id="@+id/more_set_relativelayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px88"
-            android:layout_below="@id/fenge2"
-            android:layout_marginLeft="@dimen/px30"
-            android:gravity="center_vertical"
-            android:text="更多设置"
-            android:textColor="#999999"
-            android:textSize="@dimen/px32" />
-        <ImageView
-            android:id="@+id/xiangyou3"
-            android:layout_below="@id/fenge2"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/px88"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/px15"
-            android:paddingLeft="@dimen/px15"
-            android:paddingRight="@dimen/px15"
-            android:src="@drawable/youjianjian" />
+            android:layout_below="@id/fenge2" >
+
+            <TextView
+                android:id="@+id/more_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/px30"
+                android:gravity="center_vertical"
+                android:text="更多设置"
+                android:textColor="#999999"
+                android:textSize="@dimen/px32" />
+
+            <ImageView
+                android:id="@+id/xiangyou3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px15"
+                android:paddingLeft="@dimen/px15"
+                android:paddingRight="@dimen/px15"
+                android:src="@drawable/youjianjian" />
+        </RelativeLayout>
 
         <View
             android:id="@+id/fenge3"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px1"
-            android:layout_below="@id/more_set"
+            android:layout_below="@id/more_set_relativelayout"
             android:layout_marginLeft="@dimen/px30"
             android:layout_marginRight="@dimen/px30"
             android:background="#999999" />

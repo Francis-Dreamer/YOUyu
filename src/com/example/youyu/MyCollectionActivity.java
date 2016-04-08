@@ -5,11 +5,14 @@ import com.example.youyu.adapter.MyCollectionAdapter;
 import com.example.youyu.model.MyCollectionModel;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 /**
  * 我的收藏
- * @author Administrator
+ * @author 陈佳智
  *
  */
 public class MyCollectionActivity extends Activity{
@@ -29,9 +32,29 @@ public class MyCollectionActivity extends Activity{
 	 * 初始化页面
 	 */
 	private void initView(){
+		
+		ImageView back=(ImageView) findViewById(R.id.back);
+		
+		
 		listView=(ListView) findViewById(R.id.mycollection_listview);
 		data=MyCollectionModel.getData();
 		adapter=new MyCollectionAdapter(data, this);
 		listView.setAdapter(adapter);
+		
+		back.setOnClickListener(clickListener);
 	}
+	
+	OnClickListener clickListener=new OnClickListener() {
+		
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.back:
+				finish();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 }

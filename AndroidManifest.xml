@@ -38,13 +38,13 @@
         <activity android:name="com.example.youyu.DraftsBoxActivity" >
         </activity>
         <activity android:name="com.example.youyu.LoginActivity" >
-        </activity>
-        <activity android:name="com.example.youyu.MessageActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.youyu.MessageActivity" >
         </activity>
         <activity android:name="com.example.youyu.MyCollectionActivity" >
         </activity>

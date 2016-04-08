@@ -43,6 +43,7 @@
         android:background="#eeeeee" />
 
     <RelativeLayout
+        android:id="@+id/personal_data_relativelayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/px90" >
 
@@ -75,6 +76,7 @@
         android:background="#eeeeee" />
 
     <RelativeLayout
+        android:id="@+id/tel_relativelayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/px90" >
 
