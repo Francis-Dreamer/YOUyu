@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     <RadioGroup
@@ -19,7 +20,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawablePadding="@dimen/px10"
-            android:drawableTop="@drawable/yu"
+            android:drawableTop="@drawable/selector_yu"
             android:gravity="center"
             android:text="@string/yu"
             android:textColor="@color/textcolor_tittle"
@@ -31,7 +32,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawablePadding="@dimen/px10"
-            android:drawableTop="@drawable/nao"
+            android:drawableTop="@drawable/selector_nao"
             android:gravity="center"
             android:text="@string/nao"
             android:textColor="@color/textcolor_tittle"
@@ -43,7 +44,7 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawablePadding="@dimen/px10"
-            android:drawableTop="@drawable/tan"
+            android:drawableTop="@drawable/selector_tan"
             android:gravity="center"
             android:text="@string/tan"
             android:textColor="@color/textcolor_tittle"

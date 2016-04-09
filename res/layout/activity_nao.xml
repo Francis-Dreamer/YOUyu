@@ -20,6 +20,7 @@
             android:button="@null"
             android:drawableBottom="@drawable/selector_nao_rbtn"
             android:gravity="center_horizontal"
+            android:checked="true"
             android:text="吃" />
 
         <RadioButton
