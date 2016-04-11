@@ -7,8 +7,8 @@ import com.example.youyu.adapter.NaoAdapter;
 import com.example.youyu.model.NaoModel;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +25,6 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	private View view;
 	private RadioGroup radioGroup;
 	private ListView listView;
-	private ImageView iv_icon;
-	private TextView tv_title;
 	private List<NaoModel> data_eat;
 	private List<NaoModel> data_dreak;
 	private List<NaoModel> data_play;
@@ -45,7 +43,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 
 		initView();
 
-		return super.onCreateView(inflater, container, savedInstanceState);
+		return view;
 	}
 
 	/**
@@ -62,11 +60,6 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	 * 初始化控件
 	 */
 	private void initView() {
-		iv_icon = (ImageView) view.findViewById(R.id.top_imageview);
-		iv_icon.setImageResource(R.drawable.nao_icon);
-		tv_title = (TextView) view.findViewById(R.id.top_title);
-		tv_title.setText("游渝");
-
 		radioGroup = (RadioGroup) view.findViewById(R.id.rg_nao_radiogroup);
 		radioGroup.setOnCheckedChangeListener(this);
 

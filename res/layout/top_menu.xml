@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/main"
+    android:background="#ffffff"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -29,6 +30,14 @@
             android:textColor="@color/textcolor_tittle"
             android:textSize="@dimen/px36"
             android:text="@string/title" />
+        <ImageView
+            android:id="@+id/image_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/px30"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/px15"
+            android:src="@drawable/fangdajing" />
     </RelativeLayout>
 
     <View

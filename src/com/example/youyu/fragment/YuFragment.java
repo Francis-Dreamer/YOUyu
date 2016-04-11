@@ -1,21 +1,21 @@
-package com.example.youyu;
+package com.example.youyu.fragment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
+import com.example.youyu.OldTimeyActivity;
+import com.example.youyu.R;
 import com.example.youyu.baseadapter.YuBaseAdapter;
 import com.example.youyu.model.YuModel;
-
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
@@ -24,7 +24,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class YuActivity extends Activity {
+public class YuFragment extends Fragment{
 	ListView listView;
 	TextView top_tittle;
 	YuBaseAdapter adapter;
@@ -34,11 +34,13 @@ public class YuActivity extends Activity {
 	TextView weather,yu_image_by,time;
 	PopupWindow popupWindow;
 	LayoutInflater inflater;
+	View view;
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_yu);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		view=inflater.inflate(R.layout.listview_yu, null);
 		initView();
+		return view;
 	}
 
 	/*
@@ -46,17 +48,14 @@ public class YuActivity extends Activity {
 	 */
 	private void initView() {
 		yuModel = new YuModel();
-		top_imageview = (ImageView) findViewById(R.id.top_imageview);
-		top_title = (TextView) findViewById(R.id.top_title);
-		text = (TextView) findViewById(R.id.yu_text);
-		text_number = (TextView) findViewById(R.id.yu_textnumber);
-		text_name = (TextView) findViewById(R.id.yu_text_tittle);
-		weather = (TextView) findViewById(R.id.yu_weather);
-		time = (TextView) findViewById(R.id.yu_date);
-		image_share = (ImageView) findViewById(R.id.yu_share);
-		yu_image_by=(TextView)findViewById(R.id.yu_image_by);
-		yu_image=(ImageView)findViewById(R.id.yu_image);
-		top_title.setText("游渝");
+		text = (TextView) view.findViewById(R.id.yu_text);
+		text_number = (TextView) view.findViewById(R.id.yu_textnumber);
+		text_name = (TextView) view.findViewById(R.id.yu_text_tittle);
+		weather = (TextView) view.findViewById(R.id.yu_weather);
+		time = (TextView) view.findViewById(R.id.yu_date);
+		image_share = (ImageView) view.findViewById(R.id.yu_share);
+		yu_image_by=(TextView)view.findViewById(R.id.yu_image_by);
+		yu_image=(ImageView)view.findViewById(R.id.yu_image);
 		// 获取渝的数据
 		getModelData();
 		getData();
@@ -99,7 +98,7 @@ public class YuActivity extends Activity {
 				break;
 			case R.id.yu_image:
 				//跳转到往期回顾
-				Intent intent=new Intent(YuActivity.this,OldTimeyActivity.class);
+				Intent intent=new Intent(getActivity(),OldTimeyActivity.class);
 				startActivity(intent);
 				break;
 			default:
@@ -113,10 +112,11 @@ public class YuActivity extends Activity {
 	 */
 	@SuppressLint("InflateParams")
 	public void popWindow() {
+		inflater=LayoutInflater.from(getActivity());
 		View view = inflater.inflate(R.layout.activity_yu_shaarepopupwindow,
 				null);
 		// 获取屏幕宽度
-		WindowManager wm = this.getWindowManager();
+		WindowManager wm = getActivity().getWindowManager();
 		@SuppressWarnings("deprecation")
 		int width = wm.getDefaultDisplay().getWidth();
 		final int height = view.findViewById(R.id.share_pop).getTop();

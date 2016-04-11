@@ -15,6 +15,7 @@
         android:paddingTop="@dimen/px15" >
 
         <RadioButton
+            android:id="@+id/yu"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -27,6 +28,7 @@
             android:textSize="@dimen/px30" />
 
         <RadioButton
+            android:id="@+id/nao"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -39,6 +41,7 @@
             android:textSize="@dimen/px30" />
 
         <RadioButton
+            android:id="@+id/tan"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
