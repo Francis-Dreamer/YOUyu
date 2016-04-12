@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-
     <RadioGroup
         android:id="@+id/rg_nao_radiogroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginRight="@dimen/px30"
         android:orientation="horizontal" >
 
         <RadioButton
@@ -18,9 +19,13 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawableBottom="@drawable/selector_nao_rbtn"
-            android:gravity="center_horizontal"
-            android:checked="true"
-            android:text="吃" />
+            android:drawablePadding="@dimen/px20"
+            android:gravity="center"
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:text="吃"
+            android:textColor="@color/selector_color_nao"
+            android:textSize="@dimen/px30" />
 
         <RadioButton
             android:id="@+id/rbtn_nao_dreak"
@@ -29,8 +34,13 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:drawablePadding="@dimen/px20"
             android:gravity="center_horizontal"
-            android:text="喝" />
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:text="喝"
+            android:textColor="@color/selector_color_nao"
+            android:textSize="@dimen/px30" />
 
         <RadioButton
             android:id="@+id/rbtn_nao_play"
@@ -39,8 +49,13 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:drawablePadding="@dimen/px20"
             android:gravity="center_horizontal"
-            android:text="玩" />
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:text="玩"
+            android:textColor="@color/selector_color_nao"
+            android:textSize="@dimen/px30" />
 
         <RadioButton
             android:id="@+id/rbtn_nao_happy"
@@ -49,8 +64,13 @@
             android:layout_weight="1"
             android:button="@null"
             android:drawableBottom="@drawable/selector_nao_rbtn"
+            android:drawablePadding="@dimen/px20"
             android:gravity="center_horizontal"
-            android:text="乐" />
+            android:paddingBottom="@dimen/px15"
+            android:paddingTop="@dimen/px15"
+            android:text="乐"
+            android:textColor="@color/selector_color_nao"
+            android:textSize="@dimen/px30" />
     </RadioGroup>
 
     <ListView
@@ -58,4 +78,5 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
 </LinearLayout>

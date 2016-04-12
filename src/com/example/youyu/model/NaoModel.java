@@ -59,6 +59,51 @@ public class NaoModel {
 		model.path = R.drawable.nao_item3 + "";
 		data.add(model);
 		
+		model = new NaoModel();
+		model.name = "鲜香虾仁炒饭";
+		model.path = R.drawable.nao_item1 + "";
+		data.add(model);
+
+		model = new NaoModel();
+		model.name = "芝麻千层脆";
+		model.path = R.drawable.nao_item2 + "";
+		data.add(model);
+
+		model = new NaoModel();
+		model.name = "哇，你看起来好辣";
+		model.path = R.drawable.nao_item3 + "";
+		data.add(model);
+		
+		model = new NaoModel();
+		model.name = "鲜香虾仁炒饭";
+		model.path = R.drawable.nao_item1 + "";
+		data.add(model);
+
+		model = new NaoModel();
+		model.name = "芝麻千层脆";
+		model.path = R.drawable.nao_item2 + "";
+		data.add(model);
+
+		model = new NaoModel();
+		model.name = "哇，你看起来好辣";
+		model.path = R.drawable.nao_item3 + "";
+		data.add(model);
+		
+		model = new NaoModel();
+		model.name = "鲜香虾仁炒饭";
+		model.path = R.drawable.nao_item1 + "";
+		data.add(model);
+
+		model = new NaoModel();
+		model.name = "芝麻千层脆";
+		model.path = R.drawable.nao_item2 + "";
+		data.add(model);
+
+		model = new NaoModel();
+		model.name = "哇，你看起来好辣";
+		model.path = R.drawable.nao_item3 + "";
+		data.add(model);
+		
 		return data;
 	}
 }

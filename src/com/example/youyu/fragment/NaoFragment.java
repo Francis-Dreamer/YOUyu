@@ -9,11 +9,14 @@ import com.example.youyu.model.NaoModel;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -28,7 +31,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	private List<NaoModel> data_play;
 	private List<NaoModel> data_happy;
 	private NaoAdapter adapter;
-	//导航的选项标识
+	// 导航的选项标识
 	private int flog = 1;
 
 	@SuppressLint("InflateParams")
@@ -65,7 +68,30 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 		listView.setOnItemClickListener(this);
 		adapter = new NaoAdapter(getActivity(), data_eat);
 		listView.setAdapter(adapter);
+		listView.setOnScrollListener(onScrollListener);
 	}
+
+	OnScrollListener onScrollListener = new OnScrollListener() {
+		@Override
+		public void onScrollStateChanged(AbsListView view, int scrollState) {
+			Log.i("onScroll", "scrollState = " + scrollState);
+		}
+
+		@Override
+		public void onScroll(AbsListView view, int firstVisibleItem,
+				int visibleItemCount, int totalItemCount) {
+			Log.i("onScroll", "firstVisibleItem = " + firstVisibleItem);
+			Log.i("onScroll", "visibleItemCount = " + visibleItemCount);
+			Log.i("onScroll", "totalItemCount = " + totalItemCount);
+			View c = view.getChildAt(0);
+			if (c != null) {
+				int firstVisiblePosition = view.getFirstVisiblePosition();
+				int top = c.getTop();
+				int len = -top + firstVisiblePosition * c.getHeight();
+				Log.i("onScroll", "len = " + len);
+			}
+		}
+	};
 
 	/**
 	 * 乐

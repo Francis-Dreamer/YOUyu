@@ -24,7 +24,7 @@
             android:drawableTop="@drawable/selector_yu"
             android:gravity="center"
             android:text="@string/yu"
-            android:textColor="@color/textcolor_tittle"
+            android:textColor="@color/selector_color_nao"
             android:textSize="@dimen/px30" />
 
         <RadioButton
@@ -37,7 +37,7 @@
             android:drawableTop="@drawable/selector_nao"
             android:gravity="center"
             android:text="@string/nao"
-            android:textColor="@color/textcolor_tittle"
+            android:textColor="@color/selector_color_nao"
             android:textSize="@dimen/px30" />
 
         <RadioButton
@@ -50,7 +50,7 @@
             android:drawableTop="@drawable/selector_tan"
             android:gravity="center"
             android:text="@string/tan"
-            android:textColor="@color/textcolor_tittle"
+            android:textColor="@color/selector_color_nao"
             android:textSize="@dimen/px30" />
     </RadioGroup>
 
