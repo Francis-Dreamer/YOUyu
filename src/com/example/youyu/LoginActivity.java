@@ -30,6 +30,7 @@ public class LoginActivity extends Activity{
 	 * 初始化界面
 	 */
 	private void initView(){
+		@SuppressWarnings("unused")
 		ImageView back=(ImageView) findViewById(R.id.back);
 		
 		TextView login_username=(TextView) findViewById(R.id.login_username);

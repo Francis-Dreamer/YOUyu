@@ -1,7 +1,6 @@
 package com.example.youyu;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -43,7 +42,7 @@ public class OldTimeyActivity extends Activity {
 		top_imageview = (ImageView) findViewById(R.id.top_imageview);
 		top_title = (TextView) findViewById(R.id.top_title);
 		// 设置标题
-		top_imageview.setBackgroundResource(R.drawable.fanhui);
+		top_imageview.setImageResource(R.drawable.fanhui);
 		top_title.setText("往期回顾");
 		top_imageview.setOnClickListener(clickListener);
 		// 获取数据并放入ExpandableListView中
