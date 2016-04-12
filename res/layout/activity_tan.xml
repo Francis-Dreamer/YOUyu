@@ -8,8 +8,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="地点" />
+        android:layout_marginBottom="@dimen/px36"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginTop="@dimen/px30"
+        android:text="地点"
+        android:textColor="#333333"
+        android:textSize="@dimen/px30" />
 
     <View
         android:layout_width="match_parent"
@@ -23,48 +27,56 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="渝中区" />
+            android:text="渝中区"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="大渡口区"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/xuanzhong"
+            android:gravity="center"
+            android:text="江北区"
+            android:textColor="#0099ff"
+            android:textSize="@dimen/px27" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="大渡口区" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="江北区" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="沙坪坝区" />
+            android:text="沙坪坝区"
+            android:textSize="@dimen/px27" />
     </LinearLayout>
 
     <LinearLayout
@@ -72,117 +84,66 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="九龙坡区" />
+            android:text="九龙坡区"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="南岸区"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="北碚区"
+            android:textSize="@dimen/px27" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="南岸区" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="北碚区" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="..." />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="人数" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="#eeeeee" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="独自" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="两人" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="三人" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="三人以上" />
+            android:text="..."
+            android:textSize="@dimen/px27" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="关系" />
+        android:layout_marginBottom="@dimen/px36"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginTop="@dimen/px45"
+        android:text="人数"
+        android:textColor="#333333"
+        android:textSize="@dimen/px30" />
 
     <View
         android:layout_width="match_parent"
@@ -196,55 +157,67 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="朋友" />
+            android:text="独自"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/xuanzhong"
+            android:gravity="center"
+            android:text="两人"
+            android:textColor="#0099ff"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="三人"
+            android:textSize="@dimen/px27" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="情侣" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="同事" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="家人" />
+            android:text="三人以上"
+            android:textSize="@dimen/px27" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="时间" />
+        android:layout_marginBottom="@dimen/px36"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginTop="@dimen/px45"
+        android:text="关系"
+        android:textColor="#333333"
+        android:textSize="@dimen/px30" />
 
     <View
         android:layout_width="match_parent"
@@ -258,48 +231,130 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
         android:orientation="horizontal" >
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/xuanzhong"
+            android:gravity="center"
+            android:text="朋友"
+            android:textColor="#0099ff"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="半天" />
+            android:text="情侣"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="同事"
+            android:textSize="@dimen/px27" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
             android:background="@drawable/juxing"
             android:gravity="center"
-            android:text="一天" />
+            android:text="家人"
+            android:textSize="@dimen/px27" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px36"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginTop="@dimen/px45"
+        android:text="时间"
+        android:textColor="#333333"
+        android:textSize="@dimen/px30" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#eeeeee" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="半天"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="一天"
+            android:textSize="@dimen/px27" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/px43"
+            android:layout_marginTop="@dimen/px36"
+            android:layout_weight="1"
+            android:background="@drawable/juxing"
+            android:gravity="center"
+            android:text="两天"
+            android:textSize="@dimen/px27" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
+            android:layout_marginTop="@dimen/px36"
             android:layout_weight="1"
-            android:background="@drawable/juxing"
+            android:background="@drawable/xuanzhong"
             android:gravity="center"
-            android:text="两天" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_weight="1"
-            android:background="@drawable/juxing"
-            android:gravity="center"
-            android:text="两天以上" />
+            android:text="两天以上"
+            android:textColor="#0099ff"
+            android:textSize="@dimen/px27" />
     </LinearLayout>
 
     <Button
@@ -310,6 +365,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/juxing_two"
         android:text="探"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="@dimen/px33" />
 
 </LinearLayout>
