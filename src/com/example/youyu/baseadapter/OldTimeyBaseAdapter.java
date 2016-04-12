@@ -1,22 +1,18 @@
 package com.example.youyu.baseadapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.example.youyu.R;
 import com.example.youyu.adapter.OldTimeGridView;
-import com.example.youyu.baseadapter.OldTimeGridViewBaseAdapter.ViewHolder;
 import com.example.youyu.model.OldTimeYModel;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -72,6 +68,7 @@ public class OldTimeyBaseAdapter extends BaseExpandableListAdapter {
 		return true;
 	}
 
+	@SuppressLint("InflateParams")
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,
 			View convertView, ViewGroup parent) {
@@ -89,13 +86,15 @@ public class OldTimeyBaseAdapter extends BaseExpandableListAdapter {
 		holder = (ViewHolder) convertView.getTag();
 		holder.oldTime_month.setText(model.getMonth());
 		if (isExpanded) {
-			holder.oldtime_thismonth.setImageResource(R.drawable.this_month_xiala);
+			holder.oldtime_thismonth
+					.setImageResource(R.drawable.this_month_xiala);
 		} else {
 			holder.oldtime_thismonth.setImageResource(R.drawable.this_month);
 		}
 		return convertView;
 	}
 
+	@SuppressLint("InflateParams")
 	@Override
 	public View getChildView(int groupPosition, int childPosition,
 			boolean isLastChild, View convertView, ViewGroup parent) {

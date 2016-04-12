@@ -30,13 +30,13 @@ import android.widget.TextView;
  */
 public class AllPageFragmentActivity extends FragmentActivity {
 	List<Fragment> list;
-	ImageView top_imageview;
 	NaoFragment naoFragment;
 	YuFragment yuFragment;
 	TanFragment tanFragment;
 	ViewPager viewPager;
 	RadioGroup radioGroup;
 	RadioButton radio_yu, radio_nao, radio_tan;
+	ImageView top_imageview;
 	TextView top_title;
 	ImageView image_search;
 	@Override
@@ -51,13 +51,13 @@ public class AllPageFragmentActivity extends FragmentActivity {
 	 */
 	private void initView() {
 		top_imageview = (ImageView) findViewById(R.id.top_imageview);
+		image_search = (ImageView) findViewById(R.id.image_search);
+		top_title=(TextView)findViewById(R.id.top_title);
 		viewPager = (ViewPager) findViewById(R.id.viewpager);
 		radioGroup = (RadioGroup) findViewById(R.id.bottom_menu);
-		top_title=(TextView)findViewById(R.id.top_title);
 		radio_yu = (RadioButton) findViewById(R.id.yu);
 		radio_nao = (RadioButton) findViewById(R.id.nao);
 		radio_tan = (RadioButton) findViewById(R.id.tan);
-		image_search = (ImageView) findViewById(R.id.image_search);
 		naoFragment = new NaoFragment();
 		yuFragment = new YuFragment();
 		tanFragment = new TanFragment();
@@ -69,7 +69,7 @@ public class AllPageFragmentActivity extends FragmentActivity {
 				getSupportFragmentManager(), list);
 		viewPager.setAdapter(allPageFragmentAdapter);
 		
-		image_search.setVisibility(View.GONE);
+		image_search.setVisibility(View.INVISIBLE);
 		viewPager.setOnPageChangeListener(changeListener);
 		radioGroup.setOnCheckedChangeListener(checkedChangeListener);
 		image_search.setOnClickListener(clickListener);
@@ -151,12 +151,12 @@ public class AllPageFragmentActivity extends FragmentActivity {
 			case R.id.yu:
 				//渝
 				viewPager.setCurrentItem(0);
-				image_search.setVisibility(View.GONE);
+				image_search.setVisibility(View.INVISIBLE);
 				break;
 			case R.id.nao:
 				//闹
 				viewPager.setCurrentItem(1);
-				image_search.setVisibility(View.GONE);
+				image_search.setVisibility(View.INVISIBLE);
 				break;
 			case R.id.tan:
 				//探
