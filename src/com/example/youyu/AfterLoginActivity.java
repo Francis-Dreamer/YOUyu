@@ -31,8 +31,9 @@ public class AfterLoginActivity extends Activity{
 		RelativeLayout more_set_relativelayout=(RelativeLayout) findViewById(R.id.more_set_relativelayout);
 		ImageView mycollection=(ImageView) findViewById(R.id.mycollection);
 		ImageView mystrategy=(ImageView) findViewById(R.id.mystrategy);
+		ImageView back=(ImageView) findViewById(R.id.back);
 		
-		
+		back.setOnClickListener(clickListener);
 		mycollection.setOnClickListener(clickListener);
 		mystrategy.setOnClickListener(clickListener);
 		drafts_relativelayout.setOnClickListener(clickListener);
@@ -63,6 +64,9 @@ public class AfterLoginActivity extends Activity{
 			case R.id.mystrategy:
 				intent.setClass(AfterLoginActivity.this, MyStrategyActivity.class);
 				startActivity(intent);
+				break;
+			case R.id.back:
+				finish();
 				break;
 			default:
 				break;
