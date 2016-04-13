@@ -2,10 +2,7 @@ package com.example.youyu.fragment;
 
 import java.util.List;
 
-import com.example.youyu.R;
-import com.example.youyu.adapter.NaoAdapter;
-import com.example.youyu.model.NaoModel;
-
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,13 +10,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AbsListView;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+
+import com.example.youyu.R;
+import com.example.youyu.adapter.NaoAdapter;
+import com.example.youyu.model.NaoModel;
 
 public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 		OnItemClickListener {
@@ -85,10 +86,22 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 			Log.i("onScroll", "totalItemCount = " + totalItemCount);
 			View c = view.getChildAt(0);
 			if (c != null) {
-				int firstVisiblePosition = view.getFirstVisiblePosition();
-				int top = c.getTop();
-				int len = -top + firstVisiblePosition * c.getHeight();
+				// 当前显示的第一个item划上去的长度
+				float top = Math.abs(c.getTop());
+				Log.i("onScroll", "top = " + top);
+				// 当前显示的第一个item的高度
+				float len = view.getChildAt(0).getHeight();
 				Log.i("onScroll", "len = " + len);
+				float bi = top / len;
+				Log.i("onScroll", "bi = " + bi);
+
+//				data_eat.get(firstVisibleItem).setHeight(len * bi);
+//				data_eat.get(firstVisibleItem).setAlph((float) (1 - 0.5 * bi));
+				data_eat.get(firstVisibleItem + 1).setHeight(
+						(float) (250 * (1 + 0.5 * bi)));
+				data_eat.get(firstVisibleItem + 1).setAlph(
+						(float) (0.5 - 0.5 * bi));
+				adapter.setData(data_eat);
 			}
 		}
 	};

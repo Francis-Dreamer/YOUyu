@@ -7,16 +7,16 @@
     <FrameLayout
         android:id="@+id/nao_item_FrameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="300dp" >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent" >
 
             <ImageView
                 android:id="@+id/iv_nao_item_picture"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 android:src="@drawable/nao_item1" />
 

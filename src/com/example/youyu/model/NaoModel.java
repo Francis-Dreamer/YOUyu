@@ -8,6 +8,8 @@ import com.example.youyu.R;
 public class NaoModel {
 	private String path;
 	private String name;
+	private float height = 250;
+	private float alph = 0.5f;
 
 	public String getPath() {
 		return path;
@@ -23,6 +25,22 @@ public class NaoModel {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public float getHeight() {
+		return height;
+	}
+
+	public void setHeight(float len) {
+		this.height = len;
+	}
+
+	public float getAlph() {
+		return alph;
+	}
+
+	public void setAlph(float alph) {
+		this.alph = alph;
 	}
 
 	public static List<NaoModel> getData() {
@@ -58,7 +76,7 @@ public class NaoModel {
 		model.name = "哇，你看起来好辣";
 		model.path = R.drawable.nao_item3 + "";
 		data.add(model);
-		
+
 		model = new NaoModel();
 		model.name = "鲜香虾仁炒饭";
 		model.path = R.drawable.nao_item1 + "";
@@ -73,7 +91,7 @@ public class NaoModel {
 		model.name = "哇，你看起来好辣";
 		model.path = R.drawable.nao_item3 + "";
 		data.add(model);
-		
+
 		model = new NaoModel();
 		model.name = "鲜香虾仁炒饭";
 		model.path = R.drawable.nao_item1 + "";
@@ -88,7 +106,7 @@ public class NaoModel {
 		model.name = "哇，你看起来好辣";
 		model.path = R.drawable.nao_item3 + "";
 		data.add(model);
-		
+
 		model = new NaoModel();
 		model.name = "鲜香虾仁炒饭";
 		model.path = R.drawable.nao_item1 + "";
@@ -103,7 +121,7 @@ public class NaoModel {
 		model.name = "哇，你看起来好辣";
 		model.path = R.drawable.nao_item3 + "";
 		data.add(model);
-		
+
 		return data;
 	}
 }
