@@ -88,7 +88,7 @@ public class NaoAdapter extends BaseAdapter {
 		Log.e("getView", "height = "+model.getHeight());
 		Log.e("getView", "alph = "+model.getAlph());
 		if(position == 0){
-			holder.fragmentview.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,(int) (250*1.5)));
+			holder.fragmentview.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,(int) (250*1.6)));
 			holder.view.setAlpha(0);
 		}else{
 			holder.fragmentview.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,(int) Math.ceil(model.getHeight())));
