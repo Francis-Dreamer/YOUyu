@@ -9,7 +9,7 @@ public class NaoModel {
 	private String path;
 	private String name;
 	private float height = 250;
-	private float alph = 0.5f;
+	private float alph = 0.6f;
 
 	public String getPath() {
 		return path;
