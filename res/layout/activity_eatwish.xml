@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <include layout="@layout/top_menu"/>
-	<ListView 
-	    android:id="@+id/listview_eatwish"
-	    android:background="#ffffff"
-	    android:layout_width="match_parent"
-	    android:divider="@null"
-	    android:layout_height="0dp"
-	    android:layout_weight="1"
-	    android:paddingBottom="@dimen/px39"
-	    ></ListView>
+
+    <include layout="@layout/top_menu" />
+
+    <ListView
+        android:id="@+id/listview_eatwish"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:divider="@null"
+        android:paddingBottom="@dimen/px39" >
+    </ListView>
+
 </LinearLayout>

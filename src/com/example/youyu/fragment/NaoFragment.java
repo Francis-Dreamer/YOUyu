@@ -8,9 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
@@ -20,7 +18,7 @@ import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
-import com.example.youyu.EatWishActivity;
+import com.example.youyu.NaoItemActivity;
 import com.example.youyu.R;
 import com.example.youyu.adapter.NaoAdapter;
 import com.example.youyu.model.NaoModel;
@@ -82,13 +80,13 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 		public void onScrollStateChanged(AbsListView view, int scrollState) {
 			Log.i("onScroll", "scrollState = " + scrollState);
 			switch (scrollState) {
-			case OnScrollListener.SCROLL_STATE_IDLE://空闲状态  
+			case OnScrollListener.SCROLL_STATE_IDLE:// 空闲状态
 				isScroll = false;
 				break;
-			case OnScrollListener.SCROLL_STATE_FLING://滚动状态 
+			case OnScrollListener.SCROLL_STATE_FLING:// 滚动状态
 				isScroll = true;
 				break;
-			case OnScrollListener.SCROLL_STATE_TOUCH_SCROLL://触摸后滚动  
+			case OnScrollListener.SCROLL_STATE_TOUCH_SCROLL:// 触摸后滚动
 				isScroll = true;
 				break;
 			default:
@@ -206,20 +204,37 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		Intent intent = new Intent(getActivity(), EatWishActivity.class);
+		Intent intent = new Intent(getActivity(), NaoItemActivity.class);
+		NaoModel model;
+		Bundle bundle = new Bundle();
 		switch (flog) {
 		case 1:
-			NaoModel model = data_eat.get(position);
-
+			model = data_eat.get(position);
+			bundle.putString("name", model.getName());
+			bundle.putString("path", model.getPath());
+			intent.putExtras(bundle);
+			startActivity(intent);
 			break;
 		case 2:
-
+			model = data_dreak.get(position);
+			bundle.putString("name", model.getName());
+			bundle.putString("path", model.getPath());
+			intent.putExtras(bundle);
+			startActivity(intent);
 			break;
 		case 3:
-
+			model = data_play.get(position);
+			bundle.putString("name", model.getName());
+			bundle.putString("path", model.getPath());
+			intent.putExtras(bundle);
+			startActivity(intent);
 			break;
 		case 4:
-
+			model = data_happy.get(position);
+			bundle.putString("name", model.getName());
+			bundle.putString("path", model.getPath());
+			intent.putExtras(bundle);
+			startActivity(intent);
 			break;
 		default:
 			break;
