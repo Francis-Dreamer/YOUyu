@@ -1,10 +1,10 @@
 package com.example.youyu.fragment;
 
+import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 import com.example.youyu.CommentActivity;
 import com.example.youyu.EatWishActivity;
 import com.example.youyu.OldTimeyActivity;
@@ -18,6 +18,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v4.widget.EdgeEffectCompat;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -32,86 +34,90 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-public class YuFragment extends Fragment{
+public class YuFragment extends Fragment {
 	ListView listView;
 	TextView top_tittle;
 	YuBaseAdapter adapter;
 	YuModel yuModel;
-	ImageView top_imageview,yu_image,image_share,yu_comment;
-	TextView text_name,text,text_number,top_title;
-	TextView weather,yu_image_by,time;
+	ImageView top_imageview, yu_image, image_share, yu_comment;
+	TextView text_name, text, text_number, top_title;
+	TextView weather, yu_image_by, time;
 	PopupWindow popupWindow;
 	LayoutInflater inflater;
 	LinearLayout title_layout;
 	YuImageBaseAdapter imageBaseAdapter;
 	List<View> views;
 	View view;
-	View view1;
+	View yu_view;
 	ViewPager viewPager;
-	@SuppressLint("InflateParams") @Override
+	private EdgeEffectCompat leftEdge;
+	private EdgeEffectCompat rightEdge;
+
+	@SuppressLint("InflateParams")
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		view=inflater.inflate(R.layout.activity_yu, null);
-		viewPager=(ViewPager)view.findViewById(R.id.viewpager_yu);
+		view = inflater.inflate(R.layout.activity_yu, null);
+		viewPager = (ViewPager) view.findViewById(R.id.viewpager_yu);
 		loadView();
 		return view;
 	}
-	private void loadView(){
+
+	@SuppressLint("InflateParams")
+	private void loadView() {
 		views = new ArrayList<View>();
-		LayoutInflater inflater=LayoutInflater.from(getActivity());
-		for(int i=0;i<5;i++){
-		view1=inflater.inflate(R.layout.listview_yu, null);
+		LayoutInflater inflater = LayoutInflater.from(getActivity());
+		for (int i = 0; i < 5; i++) {
+			yu_view = inflater.inflate(R.layout.listview_yu, null);
 			initView();
-			views.add(view1);
+			yuModel=new YuModel();
+			yuModel.getData();
+			List<YuModel> list = yuModel.getList();
+			yuModel=(YuModel)list.get(i);
+			getData();
+			views.add(yu_view);
 		}
-		//初始化Adapter
-		imageBaseAdapter=new YuImageBaseAdapter(views);
+		lastOntouch();// 滑动到最后页跳转
+		// 初始化Adapter
+		imageBaseAdapter = new YuImageBaseAdapter(views);
 		viewPager.setAdapter(imageBaseAdapter);
 		viewPager.setCurrentItem(4);
 		viewPager.setOnPageChangeListener(listener);
 	}
+
 	/*
 	 * 初始化控件
 	 */
 	private void initView() {
-		yuModel = new YuModel();
-		text = (TextView) view1.findViewById(R.id.yu_text);
-		text_number = (TextView) view1.findViewById(R.id.yu_textnumber);
-		text_name = (TextView) view1.findViewById(R.id.yu_text_tittle);
-		title_layout=(LinearLayout)view1.findViewById(R.id.title_layout);
-		weather = (TextView) view1.findViewById(R.id.yu_weather);
-		time = (TextView) view1.findViewById(R.id.yu_date);
-		image_share = (ImageView) view1.findViewById(R.id.yu_share);
-		yu_image_by=(TextView)view1.findViewById(R.id.yu_image_by);
-		yu_image=(ImageView)view1.findViewById(R.id.yu_image);
-		yu_comment=(ImageView)view1.findViewById(R.id.yu_comment);
-		// 获取渝的数据
-		getModelData();
-		getData();
-	}
-
-	@SuppressLint("SimpleDateFormat")
-	private void getData() {
+		text = (TextView) yu_view.findViewById(R.id.yu_text);
+		text_number = (TextView) yu_view.findViewById(R.id.yu_textnumber);
+		text_name = (TextView) yu_view.findViewById(R.id.yu_text_tittle);
+		title_layout = (LinearLayout) yu_view.findViewById(R.id.title_layout);
+		weather = (TextView) yu_view.findViewById(R.id.yu_weather);
+		time = (TextView) yu_view.findViewById(R.id.yu_date);
+		image_share = (ImageView) yu_view.findViewById(R.id.yu_share);
+		yu_image_by = (TextView) yu_view.findViewById(R.id.yu_image_by);
+		yu_image = (ImageView) yu_view.findViewById(R.id.yu_image);
+		yu_comment = (ImageView) yu_view.findViewById(R.id.yu_comment);
 		yu_comment.setOnClickListener(clickListener);
 		image_share.setOnClickListener(clickListener);
 		yu_image.setOnClickListener(clickListener);
 		title_layout.setOnClickListener(clickListener);
 		text_name.setOnClickListener(clickListener);
+	}
+
+	@SuppressLint("SimpleDateFormat")
+	private void getData() {
 		Date date = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
+		time.setText(dateFormat.format(date));
 		text.setText(yuModel.getText());
 		text_name.setText(yuModel.getText_name());
 		text_number.setText("第" + yuModel.getText_number() + "篇");
 		weather.setText("今日天气：" + yuModel.getWeather());
 		yu_image_by.setText("photo by:Tristain Kwan");
-		time.setText(dateFormat.format(date));
 	}
-	private void getModelData(){
-		yuModel.setText("是否考虑该好好读书卡还给客户给大家看还是感慨");
-		yuModel.setText_name("2016重庆吃货心愿单");
-		yuModel.setText_number("一");
-		yuModel.setWeather("晴");
-	}
+
 	/**
 	 * 点击事件
 	 */
@@ -130,18 +136,18 @@ public class YuFragment extends Fragment{
 				popupWindow.dismiss();
 				break;
 			case R.id.yu_image:
-				//跳转到往期回顾
-				intent=new Intent(getActivity(),OldTimeyActivity.class);
+				// 跳转到往期回顾
+				intent = new Intent(getActivity(), OldTimeyActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.title_layout:
-				//跳转到吃货心愿单
-				intent=new Intent(getActivity(),EatWishActivity.class);
+				// 跳转到吃货心愿单
+				intent = new Intent(getActivity(), EatWishActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.yu_comment:
-				//跳转到评论列表
-				intent=new Intent(getActivity(),CommentActivity.class);
+				// 跳转到评论列表
+				intent = new Intent(getActivity(), CommentActivity.class);
 				startActivity(intent);
 				break;
 			default:
@@ -155,7 +161,7 @@ public class YuFragment extends Fragment{
 	 */
 	@SuppressLint("InflateParams")
 	public void popWindow() {
-		inflater=LayoutInflater.from(getActivity());
+		inflater = LayoutInflater.from(getActivity());
 		View view = inflater.inflate(R.layout.activity_yu_shaarepopupwindow,
 				null);
 		// 获取屏幕宽度
@@ -182,24 +188,48 @@ public class YuFragment extends Fragment{
 			}
 		});
 	}
+
 	/**
 	 * ViewPager滑动相应事件
 	 */
-	OnPageChangeListener listener=new OnPageChangeListener() {
-		
+	OnPageChangeListener listener = new OnPageChangeListener() {
+
 		@Override
 		public void onPageSelected(int arg0) {
-			
+
 		}
-		
+
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
 			
 		}
-		
+
 		@Override
 		public void onPageScrollStateChanged(int arg0) {
-			
+			if (leftEdge != null && !leftEdge.isFinished()) {// 到了最后一张并且还继续拖动，出现蓝色限制边条了
+				// 跳转到往期回顾
+				Log.i("tag", "onPageScrolled");
+				Intent intent = new Intent(getActivity(),
+						OldTimeyActivity.class);
+				startActivityForResult(intent, 0);
+			}
 		}
 	};
+
+	private void lastOntouch() {
+		try {
+			Field leftEdgeField = viewPager.getClass().getDeclaredField(
+					"mLeftEdge");
+			Field rightEdgeField = viewPager.getClass().getDeclaredField(
+					"mRightEdge");
+			if (leftEdgeField != null && rightEdgeField != null) {
+				leftEdgeField.setAccessible(true);
+				rightEdgeField.setAccessible(true);
+				leftEdge = (EdgeEffectCompat) leftEdgeField.get(viewPager);
+				rightEdge = (EdgeEffectCompat) rightEdgeField.get(viewPager);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

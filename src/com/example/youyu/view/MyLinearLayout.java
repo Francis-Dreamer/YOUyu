@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.widget.LinearLayout;
 
 public class MyLinearLayout extends LinearLayout {
-//	private OnMeasureListener onMeasureListener;
+	private OnMeasureListener onMeasureListener;
 
 	public MyLinearLayout(Context context) {
 		super(context);
@@ -18,20 +18,20 @@ public class MyLinearLayout extends LinearLayout {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		/*if (onMeasureListener != null) {
+		if (onMeasureListener != null) {
 			onMeasureListener.onMeasureListener(getMeasuredWidth(),
 					getMeasuredHeight());
-		}*/
+		}
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 	}
 
-/*	public interface OnMeasureListener {
+	public interface OnMeasureListener {
 		public void onMeasureListener(int width, int height);
 	}
 
 	public void setOnMeasureListener(OnMeasureListener onMeasureListener) {
 		this.onMeasureListener = onMeasureListener;
-	}*/
+	}
 	 @Override  
 	    protected void onDraw(Canvas canvas) {  
 	        super.onDraw(canvas);  
