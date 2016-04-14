@@ -32,21 +32,25 @@ public class LoginActivity extends Activity{
 	private void initView(){
 		@SuppressWarnings("unused")
 		ImageView back=(ImageView) findViewById(R.id.back);
-		
+		TextView register=(TextView) findViewById(R.id.register); 
 		TextView login_username=(TextView) findViewById(R.id.login_username);
 		
+		register.setOnClickListener(clickListener);
 		login_username.setOnClickListener(clickListener);
 	}
 	
 	OnClickListener clickListener=new OnClickListener() {
-		
+		Intent intent;
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.login_username:
-				Intent intent=new Intent(LoginActivity.this,AfterLoginActivity.class);
+				intent=new Intent(LoginActivity.this,AfterLoginActivity.class);
 				startActivity(intent);
 				break;
-
+			case R.id.register:
+				intent=new Intent(LoginActivity.this,RegisterActivity.class);
+				startActivity(intent);
+				break;
 			default:
 				break;
 			}
