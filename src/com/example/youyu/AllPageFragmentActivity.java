@@ -88,7 +88,7 @@ public class AllPageFragmentActivity extends FragmentActivity {
 			Intent intent=new Intent();
 			switch (v.getId()) {
 			case R.id.top_imageview:
-				intent.setClass(AllPageFragmentActivity.this,AfterLoginActivity.class);
+				intent.setClass(AllPageFragmentActivity.this,LoginActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.image_search:
