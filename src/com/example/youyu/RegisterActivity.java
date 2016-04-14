@@ -28,11 +28,12 @@ public class RegisterActivity extends Activity{
 	EditText edit_repassword;
 	TextView text_yanzhengma;
 	Button button_add;
+	DataApplication application;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
-		
+		application= (DataApplication) getApplication();
 		
 		initView();
 		
@@ -77,7 +78,7 @@ public class RegisterActivity extends Activity{
 	 * 获取验证码
 	 */
 	private void getCode(){
-		String url="http://211.149.198.8:9805//api/sms";
+		String url=application.url_top+application.url_type+"sms";
 		mobile=edit_phone.getText().toString();
 		try {
 			HttpPost httpPost=HttpPost.parseUrl(url);
@@ -110,12 +111,12 @@ public class RegisterActivity extends Activity{
 		repassword=edit_repassword.getText().toString();
 		mobile_code=edit_yanzhengma.getText().toString();
 		
-		String url="http://211.149.198.8:9805//api/reg";
+		String url=application.url_top+application.url_type+"reg";
 		
 		try {
 			HttpPost httpPost=HttpPost.parseUrl(url);
 			Map<String, String> map=new HashMap<String, String>();
-			map.put("mobile ", mobile);
+			map.put("mobile", mobile);
 			map.put("password", password);
 			map.put("repassword", repassword);
 			map.put("mobile_code", mobile_code);
