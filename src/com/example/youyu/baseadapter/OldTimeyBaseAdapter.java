@@ -129,11 +129,13 @@ public class OldTimeyBaseAdapter extends BaseExpandableListAdapter {
 	}
 
 	public void initImage() {
+		int[] images={R.drawable.furongdong,R.drawable.guzen,R.drawable.hongyadong,R.drawable.sanxiabowuguan,R.drawable.xiannvshan,R.drawable.yunyangshaunggang,R.drawable.haiyang,R.drawable.guzen};
+		String[] names={"芙蓉洞","古镇鸡杂","洪崖洞","三峡博物馆","仙女山国家森林公园","云阳双缸","重庆海洋公园","濯水古镇"};
 		gridList = new ArrayList<OldTimeYModel>();
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < images.length; i++) {
 			OldTimeYModel model = new OldTimeYModel();
-			model.setPic(R.drawable.xiannvshan);
-			model.setPic_name("仙女山");
+			model.setPic(images[i]);
+			model.setPic_name(names[i]);
 			gridList.add(model);
 		}
 	}

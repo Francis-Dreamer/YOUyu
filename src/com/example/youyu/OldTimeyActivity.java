@@ -1,6 +1,9 @@
 package com.example.youyu;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -50,23 +53,42 @@ public class OldTimeyActivity extends Activity {
 		oldTimeyBaseAdapter = new OldTimeyBaseAdapter(list, this);
 		listView.setAdapter(oldTimeyBaseAdapter);
 	}
+
 	/*
 	 * 点击事件
 	 */
-	OnClickListener clickListener=new OnClickListener() {
-		
+	OnClickListener clickListener = new OnClickListener() {
+
 		@Override
 		public void onClick(View v) {
-			//点击销毁页面
+			// 点击销毁页面
 			finish();
 		}
 	};
+
 	public void getData() {
+		Calendar c = Calendar.getInstance();// 获取日历对象
+		int mYear = c.get(Calendar.YEAR); // 获取当前年份
+		int mMonth = c.get(Calendar.MONTH) + 1;// 获取当前月份
 		list = new ArrayList<OldTimeYModel>();
 		for (int i = 0; i < 12; i++) {
-			model = new OldTimeYModel();
-			model.setMonth(i + "月");
-			list.add(model);
+			if (i == 0) {
+				model = new OldTimeYModel();
+				model.setMonth("本月");
+				list.add(model);
+			} else {
+				int nowMonth = mMonth - i;
+				if(nowMonth > 0){
+				model = new OldTimeYModel();
+				model.setMonth(mYear + " 年 " + nowMonth + " 月 ");
+				list.add(model);
+				}else{
+					model = new OldTimeYModel();	
+					model.setMonth((mYear-1) + " 年 " + (12 + nowMonth) + " 月 ");
+					list.add(model);
+				}
+			}
+
 		}
 	}
 }
