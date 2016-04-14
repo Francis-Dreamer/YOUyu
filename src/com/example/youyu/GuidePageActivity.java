@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.example.youyu.R;
 import com.example.youyu.baseadapter.FaceImageAdapter;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

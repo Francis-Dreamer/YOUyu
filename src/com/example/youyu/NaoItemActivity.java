@@ -1,7 +1,6 @@
 package com.example.youyu;
 
-import com.example.youyu.baseadapter.EatWishBaseAdapter;
-import com.example.youyu.model.EatWishModel;
+import com.example.youyu.model.NaoModel;
 import com.example.youyu.view.MyLinearLayout;
 
 import android.annotation.SuppressLint;
@@ -18,8 +17,6 @@ import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -29,24 +26,39 @@ import android.widget.TextView;
  * @author Administrator
  * 
  */
-public class EatWishActivity extends Activity {
-	ImageView top_imageview;
-	TextView top_title;
-	ImageView image_search;
-	ListView listView;
-	EatWishBaseAdapter adapter;
-	EatWishModel eatWishModel;
-	PopupWindow popupWindow;
-	MyLinearLayout eatwish_pop;
-	int ll_height;
-	int ll_width;
-	WindowManager.LayoutParams lp;
-	LinearLayout layout;
+public class NaoItemActivity extends Activity {
+	private ImageView top_imageview,image_search;
+	private TextView top_title;
+	
+	private TextView tv_title,tv_content,tv_address;
+	private ImageView iv_pic;
+	
+	private PopupWindow popupWindow;
+	private MyLinearLayout eatwish_pop;
+	private  int ll_height;
+	private int ll_width;
+	private WindowManager.LayoutParams lp;
+	
+	private NaoModel model;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_eatwish);
+		setContentView(R.layout.activity_nao_item_item);
+		
+		initBundleData();
+		
 		initView();
+	}
+
+	/**
+	 * 获取传递的bundle数据
+	 */
+	private void initBundleData() {
+		model = new NaoModel();
+		Bundle bundle = getIntent().getExtras();
+		model.setName(bundle.getString("name"));
+		model.setName(bundle.getString("path"));
 	}
 
 	/**
@@ -57,22 +69,14 @@ public class EatWishActivity extends Activity {
 		top_imageview = (ImageView) findViewById(R.id.top_imageview);
 		image_search = (ImageView) findViewById(R.id.image_search);
 		top_title = (TextView) findViewById(R.id.top_title);
-		listView = (ListView) findViewById(R.id.listview_eatwish);
-		layout=(LinearLayout)findViewById(R.id.main);
-		// 添加headerView
-		LayoutInflater inflater;
-		inflater = LayoutInflater.from(this);
-		View viewheader = inflater.inflate(R.layout.listview_headview, null);
-		listView.addHeaderView(viewheader);
-		eatWishModel = new EatWishModel();// 初始化吃货心愿单的数据类 并存入数据
-		eatWishModel.getData();
-		adapter = new EatWishBaseAdapter(eatWishModel.getList(), this);
-		listView.setAdapter(adapter);
+		
 		top_imageview.setImageResource(R.drawable.fanhui);
 		top_title.setText("2016年重庆吃货心愿单");
 		image_search.setImageResource(R.drawable.gengduo);
+		
 		image_search.setOnClickListener(clickListener);// 更多跳转到分享页面
 		top_imageview.setOnClickListener(clickListener);// 返回上一界面
+		
 	}
 
 	@SuppressLint("InflateParams")
@@ -90,10 +94,11 @@ public class EatWishActivity extends Activity {
 		popupWindow = new PopupWindow(view, ll_width, ll_height, true);
 		Rect frame = new Rect();
 		getWindow().getDecorView().getWindowVisibleDisplayFrame(frame);
-		//获取信号栏高度
+		// 获取信号栏高度
 		int statusBarHeight = frame.top;
 		popupWindow.setAnimationStyle(R.style.AppTheme);
-		popupWindow.showAtLocation(view, Gravity.TOP|Gravity.RIGHT, 0, statusBarHeight);
+		popupWindow.showAtLocation(view, Gravity.TOP | Gravity.RIGHT, 0,
+				statusBarHeight);
 		ImageView imageView = (ImageView) view.findViewById(R.id.wish_cancel);
 		imageView.setOnClickListener(clickListener);
 		view.setOnTouchListener(new OnTouchListener() {
@@ -114,7 +119,6 @@ public class EatWishActivity extends Activity {
 	}
 
 	OnClickListener clickListener = new OnClickListener() {
-
 		@Override
 		public void onClick(View v) {
 			switch (v.getId()) {
@@ -138,7 +142,6 @@ public class EatWishActivity extends Activity {
 			default:
 				break;
 			}
-
 		}
 	};
 }

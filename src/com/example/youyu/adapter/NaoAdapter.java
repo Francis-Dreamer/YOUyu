@@ -4,12 +4,15 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.example.youyu.R;
@@ -50,8 +53,8 @@ public class NaoAdapter extends BaseAdapter {
 
 	@SuppressLint("InflateParams")
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		ViewHolder holder;
+	public View getView(final int position, View convertView, ViewGroup parent) {
+		final ViewHolder holder;
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = inflater.inflate(R.layout.activity_nao_item, null);
@@ -63,6 +66,9 @@ public class NaoAdapter extends BaseAdapter {
 					.findViewById(R.id.tv_nao_item_bottom_title);
 			holder.tv_center = (TextView) convertView
 					.findViewById(R.id.tv_nao_item_center_title);
+			holder.fragmentview = (FrameLayout) convertView
+					.findViewById(R.id.nao_item_FrameLayout);
+			holder.view = convertView.findViewById(R.id.nao_item_view);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
@@ -78,6 +84,16 @@ public class NaoAdapter extends BaseAdapter {
 			holder.tv_center.setText(model.getName() + "");
 		}
 		holder.imageView.setImageResource(Integer.parseInt(model.getPath()));
+		
+		Log.e("getView", "height = "+model.getHeight());
+		Log.e("getView", "alph = "+model.getAlph());
+		if(position == 0){
+			holder.fragmentview.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,(int) (250*1.6)));
+			holder.view.setAlpha(0);
+		}else{
+			holder.fragmentview.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,(int) Math.ceil(model.getHeight())));
+			holder.view.setAlpha(model.getAlph());
+		}
 		return convertView;
 	}
 
@@ -85,5 +101,7 @@ public class NaoAdapter extends BaseAdapter {
 		ImageView imageView;
 		TextView tv_bottom, tv_center;
 		LinearLayout llayout;
+		FrameLayout fragmentview;
+		View view;
 	}
 }
