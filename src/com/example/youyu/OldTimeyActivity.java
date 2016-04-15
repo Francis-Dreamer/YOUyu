@@ -32,7 +32,6 @@ public class OldTimeyActivity extends Activity {
 	OldTimeYModel model;
 	ImageView top_imageview;
 	TextView top_title;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
