@@ -13,7 +13,7 @@ public class DongtaiActivity extends Activity {
 	ListView list_dongtai;
 	DongtaiBaseAdapter dongtaiBaseAdapter;
 	ArrayList<Dongtai_data> list = new ArrayList<Dongtai_data>();
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
