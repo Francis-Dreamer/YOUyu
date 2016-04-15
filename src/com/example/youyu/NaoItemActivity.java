@@ -27,27 +27,27 @@ import android.widget.TextView;
  * 
  */
 public class NaoItemActivity extends Activity {
-	private ImageView top_imageview,image_search;
+	private ImageView top_imageview, image_search;
 	private TextView top_title;
-	
-	private TextView tv_title,tv_content,tv_address;
+
+	private TextView tv_title, tv_content, tv_address;
 	private ImageView iv_pic;
-	
+
 	private PopupWindow popupWindow;
 	private MyLinearLayout eatwish_pop;
-	private  int ll_height;
+	private int ll_height;
 	private int ll_width;
 	private WindowManager.LayoutParams lp;
-	
+
 	private NaoModel model;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_nao_item_item);
-		
+
 		initBundleData();
-		
+
 		initView();
 	}
 
@@ -69,26 +69,24 @@ public class NaoItemActivity extends Activity {
 		top_imageview = (ImageView) findViewById(R.id.top_imageview);
 		image_search = (ImageView) findViewById(R.id.image_search);
 		top_title = (TextView) findViewById(R.id.top_title);
-		
+
 		top_imageview.setImageResource(R.drawable.fanhui);
 		top_title.setText("2016年重庆吃货心愿单");
 		image_search.setImageResource(R.drawable.gengduo);
-		
+
 		image_search.setOnClickListener(clickListener);// 更多跳转到分享页面
 		top_imageview.setOnClickListener(clickListener);// 返回上一界面
-		
+
 	}
 
 	@SuppressLint("InflateParams")
 	public void popWindow() {
 		LayoutInflater inflater = LayoutInflater.from(this);
-		View view = inflater.inflate(R.layout.activity_eatwish_popupwindow,
-				null);
+		View view = inflater.inflate(R.layout.activity_eatwish_popupwindow, null);
 		eatwish_pop = (MyLinearLayout) view.findViewById(R.id.eatwish_pop);
 
 		// 取得popup window中要显示的控件的高度
-		eatwish_pop.measure(LayoutParams.WRAP_CONTENT,
-				LayoutParams.WRAP_CONTENT);
+		eatwish_pop.measure(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		ll_width = eatwish_pop.getMeasuredWidth();
 		ll_height = eatwish_pop.getMeasuredHeight();
 		popupWindow = new PopupWindow(view, ll_width, ll_height, true);
@@ -97,8 +95,7 @@ public class NaoItemActivity extends Activity {
 		// 获取信号栏高度
 		int statusBarHeight = frame.top;
 		popupWindow.setAnimationStyle(R.style.AppTheme);
-		popupWindow.showAtLocation(view, Gravity.TOP | Gravity.RIGHT, 0,
-				statusBarHeight);
+		popupWindow.showAtLocation(view, Gravity.TOP | Gravity.RIGHT, 0, statusBarHeight);
 		ImageView imageView = (ImageView) view.findViewById(R.id.wish_cancel);
 		imageView.setOnClickListener(clickListener);
 		view.setOnTouchListener(new OnTouchListener() {
