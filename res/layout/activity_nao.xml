@@ -5,80 +5,85 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
-    <RadioGroup
-        android:id="@+id/rg_nao_radiogroup"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/px30"
-        android:layout_marginRight="@dimen/px30"
-        android:orientation="horizontal" >
+        android:layout_height="wrap_content" >
 
-        <RadioButton
-            android:id="@+id/rbtn_nao_eat"
-            android:layout_width="0dp"
+        <RadioGroup
+            android:id="@+id/rg_nao_radiogroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableBottom="@drawable/selector_nao_rbtn"
-            android:drawablePadding="@dimen/px20"
-            android:gravity="center"
-            android:paddingBottom="@dimen/px15"
-            android:paddingTop="@dimen/px15"
-            android:text="吃"
-            android:textColor="@color/selector_color_nao"
-            android:textSize="@dimen/px30" />
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
 
-        <RadioButton
-            android:id="@+id/rbtn_nao_dreak"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableBottom="@drawable/selector_nao_rbtn"
-            android:drawablePadding="@dimen/px20"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/px15"
-            android:paddingTop="@dimen/px15"
-            android:text="喝"
-            android:textColor="@color/selector_color_nao"
-            android:textSize="@dimen/px30" />
+            <RadioButton
+                android:id="@+id/rbtn_nao_eat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableBottom="@drawable/selector_nao_rbtn"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15"
+                android:checked="true"
+                android:text="吃"
+                android:textColor="@color/selector_color_nao"
+                android:textSize="@dimen/px30" />
 
-        <RadioButton
-            android:id="@+id/rbtn_nao_play"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableBottom="@drawable/selector_nao_rbtn"
-            android:drawablePadding="@dimen/px20"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/px15"
-            android:paddingTop="@dimen/px15"
-            android:text="玩"
-            android:textColor="@color/selector_color_nao"
-            android:textSize="@dimen/px30" />
+            <RadioButton
+                android:id="@+id/rbtn_nao_dreak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableBottom="@drawable/selector_nao_rbtn"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15"
+                android:text="喝"
+                android:textColor="@color/selector_color_nao"
+                android:textSize="@dimen/px30" />
 
-        <RadioButton
-            android:id="@+id/rbtn_nao_happy"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
-            android:drawableBottom="@drawable/selector_nao_rbtn"
-            android:drawablePadding="@dimen/px20"
-            android:gravity="center_horizontal"
-            android:paddingBottom="@dimen/px15"
-            android:paddingTop="@dimen/px15"
-            android:text="乐"
-            android:textColor="@color/selector_color_nao"
-            android:textSize="@dimen/px30" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbtn_nao_play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableBottom="@drawable/selector_nao_rbtn"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15"
+                android:text="玩"
+                android:textColor="@color/selector_color_nao"
+                android:textSize="@dimen/px30" />
+
+            <RadioButton
+                android:id="@+id/rbtn_nao_happy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableBottom="@drawable/selector_nao_rbtn"
+                android:gravity="center_horizontal"
+                android:paddingBottom="@dimen/px15"
+                android:paddingTop="@dimen/px15"
+                android:text="乐"
+                android:textColor="@color/selector_color_nao"
+                android:textSize="@dimen/px30" />
+        </RadioGroup>
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/lv_nao_listview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scrollbars="none" 
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:scrollbars="none" />
 
 </LinearLayout>
