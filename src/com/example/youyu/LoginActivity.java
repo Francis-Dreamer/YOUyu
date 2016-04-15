@@ -52,6 +52,7 @@ public class LoginActivity extends Activity{
 		edit_tel=(EditText) findViewById(R.id.tel);
 		edit_password=(EditText) findViewById(R.id.password);
 		
+		back.setOnClickListener(clickListener);
 		register.setOnClickListener(clickListener);
 		login_username.setOnClickListener(clickListener);
 	}
@@ -66,6 +67,9 @@ public class LoginActivity extends Activity{
 			case R.id.register:
 				intent=new Intent(LoginActivity.this,RegisterActivity.class);
 				startActivity(intent);
+				break;
+			case R.id.back:
+				finish();
 				break;
 			default:
 				break;
