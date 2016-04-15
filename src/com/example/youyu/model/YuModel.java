@@ -65,13 +65,13 @@ public class YuModel {
 			yuModel = new YuModel();
 			yuModel.setText("发给骄傲的开工建设卡号给看了啥了");
 			yuModel.setText_name("2016重庆吃货心愿单");
-			yuModel.setText_number("一");
+			yuModel.setText_number("五");
 			yuModel.setWeather("晴");
 			list.add(yuModel);
 			yuModel = new YuModel();
 			yuModel.setText("搞定了；接啊感觉啊结果的结果的时间");
 			yuModel.setText_name("2016重庆吃货心愿单");
-			yuModel.setText_number("二");
+			yuModel.setText_number("四");
 			yuModel.setWeather("雷震雨");
 			list.add(yuModel);
 			yuModel = new YuModel();
@@ -83,14 +83,14 @@ public class YuModel {
 			yuModel = new YuModel();
 			yuModel.setText("是否考虑该好好读书卡还给客户给大家看还是感慨");
 			yuModel.setText_name("2016重庆吃货心愿单");
-			yuModel.setText_number("四");
+			yuModel.setText_number("二");
 			yuModel.setWeather("小雨");
 			list.add(yuModel);
 			yuModel = new YuModel();
 			yuModel.setText("是否考虑该好好读书卡还给客户给大家看还是感慨");
 			yuModel.setText_name("2016重庆吃货心愿单");
-			yuModel.setText_number("五");
-			yuModel.setWeather("晴转多云");
+			yuModel.setText_number("一");
+			yuModel.setWeather("多云");
 			list.add(yuModel);
 		}
 
