@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="master_blue">#0099ff</color>
     <color name="sub_green">#00cccc</color>
     <color name="sub_qingse">#99ccff</color>
@@ -16,4 +17,6 @@
     <color name="icon_xuanzhong">#0099ff</color>
     <color name="icon_collect">#ff6666</color>
     <color name="icon_share">#00cccc</color>
+    <color name="textcolor_ziti">#666666</color>
+
 </resources>

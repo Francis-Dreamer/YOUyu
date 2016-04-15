@@ -5,6 +5,11 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
+   <!--  <GridView 
+        android:horizontalSpacing="@dimen/"
+        android:verticalSpacing="@dimen/"
+        ></GridView> -->
+    
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -40,54 +45,67 @@
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="渝中区"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="大渡口区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/xuanzhong"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="渝中区"
+                        android:textColor="#0099ff"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanzhong"
-                    android:gravity="center"
-                    android:text="江北区"
-                    android:textColor="#0099ff"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="大渡口区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="沙坪坝区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="江北区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="沙坪坝区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -97,69 +115,85 @@
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="九龙坡区"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="南岸区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="九龙坡区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="北碚区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="南岸区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="..."
-                    android:textSize="@dimen/px27"
-                    android:visibility="visible" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="北碚区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_shuangqiao"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="双桥区"
-                    android:textSize="@dimen/px27"
-                    android:visibility="gone" />
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="..."
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27"
+                        android:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/text_shuangqiao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="双桥区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27"
+                        android:visibility="gone" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -171,54 +205,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="渝北区"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="大渡口区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="渝北区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="巴南区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="大渡口区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="万州区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="巴南区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="万州区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -230,54 +278,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="涪陵区"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="长寿区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="涪陵区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="黔江区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="长寿区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="永川区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="黔江区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="永川区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -289,54 +351,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="江津区"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="南川区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="江津区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="合川区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="南川区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="綦江区"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="合川区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="綦江区"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -348,54 +424,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="璧山县"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="潼南县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="璧山县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="铜梁县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="潼南县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="荣昌县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="铜梁县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="荣昌县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -407,54 +497,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="梁平县"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="城口县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="梁平县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="丰都县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="城口县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="垫江县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="丰都县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="垫江县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -466,54 +570,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="武隆县"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="忠县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="武隆县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="开县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="忠县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="云阳县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="开县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="云阳县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -525,54 +643,68 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="奉节县"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="巫山县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="奉节县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="巫溪县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="巫山县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:id="@+id/text_dengdeng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="石柱县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="巫溪县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:id="@+id/text_dengdeng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="石柱县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout
@@ -584,41 +716,53 @@
                 android:orientation="horizontal"
                 android:visibility="gone" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="酉阳县"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="彭水苗族土家族自治县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="酉阳县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="秀山苗族土家族自治县"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="彭水苗族土家族自治县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="秀山苗族土家族自治县"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <TextView
@@ -645,54 +789,67 @@
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="独自"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanzhong"
-                    android:gravity="center"
-                    android:text="两人"
-                    android:textColor="#0099ff"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/xuanzhong"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="独自"
+                        android:textColor="#0099ff"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="三人"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="两人"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="三人以上"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="三人"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="三人以上"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <TextView
@@ -719,54 +876,67 @@
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanzhong"
-                    android:gravity="center"
-                    android:text="朋友"
-                    android:textColor="#0099ff"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="情侣"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/xuanzhong"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="朋友"
+                        android:textColor="#0099ff"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="同事"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="情侣"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="家人"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="同事"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="家人"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <TextView
@@ -793,54 +963,67 @@
                 android:layout_marginRight="10dp"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="半天"
-                    android:textSize="@dimen/px27" />
+                    android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="一天"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/xuanzhong"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="半天"
+                        android:textColor="#0099ff"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="@dimen/px43"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/juxing"
-                    android:gravity="center"
-                    android:text="两天"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="一天"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="@dimen/px36"
-                    android:layout_weight="1"
-                    android:background="@drawable/xuanzhong"
-                    android:gravity="center"
-                    android:text="两天以上"
-                    android:textColor="#0099ff"
-                    android:textSize="@dimen/px27" />
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="@dimen/px43"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="两天"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="@dimen/px36"
+                        android:layout_weight="1"
+                        android:background="@drawable/juxing"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="两天以上"
+                        android:textColor="#666666"
+                        android:textSize="@dimen/px27" />
+                </RadioGroup>
             </LinearLayout>
 
             <Button

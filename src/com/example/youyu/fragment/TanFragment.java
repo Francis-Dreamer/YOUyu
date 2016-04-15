@@ -98,4 +98,5 @@ public class TanFragment extends Fragment {
 		linear_otherseven.setVisibility(view.GONE);
 		linear_othereight.setVisibility(view.GONE);
 	}
+
 }
