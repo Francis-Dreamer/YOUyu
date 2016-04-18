@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class TanFragment extends Fragment {
@@ -27,6 +29,13 @@ public class TanFragment extends Fragment {
 
 	TextView text_didian;
 
+	GridView gview;
+
+	RadioButton radioBtn;
+	RadioButton rbutton_renshu;
+	RadioButton rbutton_guanxi;
+	RadioButton rbutton_shijian;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.activity_tan, null);
@@ -40,6 +49,17 @@ public class TanFragment extends Fragment {
 		linear_othersix = (LinearLayout) view.findViewById(R.id.linear_othersix);
 		linear_otherseven = (LinearLayout) view.findViewById(R.id.linear_otherseven);
 		linear_othereight = (LinearLayout) view.findViewById(R.id.linear_othereight);
+
+		radioBtn = (RadioButton) view.findViewById(R.id.yuzhong_radiobtn);
+		rbutton_renshu = (RadioButton) view.findViewById(R.id.rbutton_renshu);
+		rbutton_guanxi = (RadioButton) view.findViewById(R.id.rbutton_guanxi);
+		rbutton_shijian = (RadioButton) view.findViewById(R.id.rbutton_shijian);
+
+		gview = (GridView) view.findViewById(R.id.gview);
+
+		radioBtn.setChecked(true);
+		rbutton_renshu.setChecked(true);
+		rbutton_shijian.setChecked(true);
 
 		text_didian = (TextView) view.findViewById(R.id.text_didian);
 
@@ -70,6 +90,7 @@ public class TanFragment extends Fragment {
 	/**
 	 * 显示其它区县
 	 */
+	@SuppressWarnings("static-access")
 	public void show() {
 		text_dengdeng.setVisibility(view.GONE);
 		text_shuangqiao.setVisibility(view.VISIBLE);
@@ -86,6 +107,7 @@ public class TanFragment extends Fragment {
 	/**
 	 * 未显示其它区县
 	 */
+	@SuppressWarnings("static-access")
 	public void notShown() {
 		text_dengdeng.setVisibility(view.VISIBLE);
 		text_shuangqiao.setVisibility(view.GONE);

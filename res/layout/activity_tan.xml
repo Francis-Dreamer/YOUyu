@@ -5,11 +5,6 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
-   <!--  <GridView 
-        android:horizontalSpacing="@dimen/"
-        android:verticalSpacing="@dimen/"
-        ></GridView> -->
-    
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -38,6 +33,15 @@
                 android:layout_marginRight="10dp"
                 android:background="#eeeeee" />
 
+            <GridView
+                android:id="@+id/gview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="@dimen/px43"
+                android:numColumns="4"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/px36" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,6 +55,7 @@
                     android:orientation="horizontal" >
 
                     <RadioButton
+                        android:id="@+id/yuzhong_radiobtn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
@@ -104,7 +109,8 @@
                         android:gravity="center"
                         android:text="沙坪坝区"
                         android:textColor="#666666"
-                        android:textSize="@dimen/px27" />
+                        android:textSize="@dimen/px27"
+                        android:visibility="visible" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -795,17 +801,18 @@
                     android:orientation="horizontal" >
 
                     <RadioButton
+                        android:id="@+id/rbutton_renshu"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/xuanzhong"
+                        android:background="@drawable/selector_background_xuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="独自"
-                        android:textColor="#0099ff"
+                        android:textColor="@drawable/selector_ziti_xuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -815,11 +822,11 @@
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="两人"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -829,11 +836,11 @@
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="三人"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -843,11 +850,11 @@
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="三人以上"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
                 </RadioGroup>
             </LinearLayout>
@@ -882,17 +889,18 @@
                     android:orientation="horizontal" >
 
                     <RadioButton
+                        android:id="@+id/rbutton_guanxi"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/xuanzhong"
+                        android:background="@drawable/selector_background_xuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="朋友"
-                        android:textColor="#0099ff"
+                        android:textColor="@drawable/selector_ziti_xuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -902,11 +910,11 @@
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="情侣"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -916,11 +924,11 @@
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="同事"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -930,11 +938,11 @@
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="家人"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
                 </RadioGroup>
             </LinearLayout>
@@ -969,17 +977,18 @@
                     android:orientation="horizontal" >
 
                     <RadioButton
+                        android:id="@+id/rbutton_shijian"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/xuanzhong"
+                        android:background="@drawable/selector_background_xuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="半天"
-                        android:textColor="#0099ff"
+                        android:textColor="@drawable/selector_ziti_xuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -989,11 +998,11 @@
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="一天"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
 
                     <RadioButton
@@ -1003,7 +1012,7 @@
                         android:layout_marginRight="@dimen/px43"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="两天"
@@ -1017,11 +1026,11 @@
                         android:layout_marginRight="8dp"
                         android:layout_marginTop="@dimen/px36"
                         android:layout_weight="1"
-                        android:background="@drawable/juxing"
+                        android:background="@drawable/selector_background_weixuanzhong"
                         android:button="@null"
                         android:gravity="center"
                         android:text="两天以上"
-                        android:textColor="#666666"
+                        android:textColor="@drawable/selector_ziti_weixuanzhong"
                         android:textSize="@dimen/px27" />
                 </RadioGroup>
             </LinearLayout>
