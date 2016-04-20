@@ -205,39 +205,29 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		Intent intent = new Intent(getActivity(), NaoItemActivity.class);
-		NaoModel model;
+		NaoModel model = null;
 		Bundle bundle = new Bundle();
 		switch (flog) {
 		case 1:
 			model = data_eat.get(position);
-			bundle.putString("name", model.getName());
-			bundle.putString("path", model.getPath());
-			intent.putExtras(bundle);
-			startActivity(intent);
 			break;
 		case 2:
 			model = data_dreak.get(position);
-			bundle.putString("name", model.getName());
-			bundle.putString("path", model.getPath());
-			intent.putExtras(bundle);
-			startActivity(intent);
 			break;
 		case 3:
 			model = data_play.get(position);
-			bundle.putString("name", model.getName());
-			bundle.putString("path", model.getPath());
-			intent.putExtras(bundle);
-			startActivity(intent);
 			break;
 		case 4:
 			model = data_happy.get(position);
-			bundle.putString("name", model.getName());
-			bundle.putString("path", model.getPath());
-			intent.putExtras(bundle);
-			startActivity(intent);
 			break;
 		default:
 			break;
 		}
+		bundle.putString("name", model.getName());
+		bundle.putString("path", model.getPath());
+		bundle.putString("address", model.getAddress());
+		bundle.putString("content", model.getContent());
+		intent.putExtras(bundle);
+		startActivity(intent);
 	}
 }

@@ -9,7 +9,6 @@ import org.json.JSONObject;
 
 import com.example.youyu.util.HttpPost;
 import com.example.youyu.util.HttpPost.OnSendListener;
-import com.google.gson.JsonObject;
 
 import android.app.Activity;
 import android.content.Intent;

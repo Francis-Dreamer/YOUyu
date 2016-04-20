@@ -27,9 +27,9 @@
             android:id="@+id/eatwish_english_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px10"
             android:drawableTop="@drawable/itembiaoqian"
             android:gravity="center"
-            android:text="@string/hello_world"
             android:textColor="@color/textcolor_qita"
             android:textSize="@dimen/px20" />
 
@@ -46,6 +46,7 @@
         android:id="@+id/eatwish_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         android:src="@drawable/text_peitu" />
 
     <TextView
@@ -53,9 +54,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@drawable/addressbiaoqian"
-        android:drawablePadding="@dimen/px5"
+        android:drawablePadding="@dimen/px10"
         android:paddingBottom="@dimen/px10"
         android:paddingLeft="@dimen/px28"
+        android:layout_marginTop="@dimen/px10"
         android:paddingTop="@dimen/px10"
         android:text="@string/hello_world"
         android:textColor="@color/icon_moren"

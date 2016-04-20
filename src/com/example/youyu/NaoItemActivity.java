@@ -58,7 +58,9 @@ public class NaoItemActivity extends Activity {
 		model = new NaoModel();
 		Bundle bundle = getIntent().getExtras();
 		model.setName(bundle.getString("name"));
-		model.setName(bundle.getString("path"));
+		model.setPath(bundle.getString("path"));
+		model.setAddress(bundle.getString("address"));
+		model.setContent(bundle.getString("content"));
 	}
 
 	/**
@@ -77,16 +79,27 @@ public class NaoItemActivity extends Activity {
 		image_search.setOnClickListener(clickListener);// 更多跳转到分享页面
 		top_imageview.setOnClickListener(clickListener);// 返回上一界面
 
+		tv_title = (TextView) findViewById(R.id.eatwish_title);
+		tv_content = (TextView) findViewById(R.id.eatwish_text);
+		tv_address = (TextView) findViewById(R.id.eatwish_address);
+		iv_pic = (ImageView) findViewById(R.id.eatwish_image);
+
+		tv_title.setText(model.getName());
+		tv_content.setText(model.getContent());
+		tv_address.setText(model.getAddress());
+		iv_pic.setImageResource(Integer.parseInt(model.getPath()));
 	}
 
 	@SuppressLint("InflateParams")
 	public void popWindow() {
 		LayoutInflater inflater = LayoutInflater.from(this);
-		View view = inflater.inflate(R.layout.activity_eatwish_popupwindow, null);
+		View view = inflater.inflate(R.layout.activity_eatwish_popupwindow,
+				null);
 		eatwish_pop = (MyLinearLayout) view.findViewById(R.id.eatwish_pop);
 
 		// 取得popup window中要显示的控件的高度
-		eatwish_pop.measure(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		eatwish_pop.measure(LayoutParams.WRAP_CONTENT,
+				LayoutParams.WRAP_CONTENT);
 		ll_width = eatwish_pop.getMeasuredWidth();
 		ll_height = eatwish_pop.getMeasuredHeight();
 		popupWindow = new PopupWindow(view, ll_width, ll_height, true);
@@ -95,7 +108,8 @@ public class NaoItemActivity extends Activity {
 		// 获取信号栏高度
 		int statusBarHeight = frame.top;
 		popupWindow.setAnimationStyle(R.style.AppTheme);
-		popupWindow.showAtLocation(view, Gravity.TOP | Gravity.RIGHT, 0, statusBarHeight);
+		popupWindow.showAtLocation(view, Gravity.TOP | Gravity.RIGHT, 0,
+				statusBarHeight);
 		ImageView imageView = (ImageView) view.findViewById(R.id.wish_cancel);
 		imageView.setOnClickListener(clickListener);
 		view.setOnTouchListener(new OnTouchListener() {
