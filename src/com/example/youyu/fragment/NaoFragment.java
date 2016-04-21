@@ -191,7 +191,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 		initData();
 		flog = 4;
 		adapter.setData(data_happy);
-		
+		listView.setAdapter(adapter);
 	}
 
 	/**
@@ -199,8 +199,9 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	 */
 	private void play() {
 		flog = 3;
-		adapter.setData(data_play);
 		initData();
+		adapter.setData(data_play);
+		listView.setAdapter(adapter);
 	}
 
 	/**
@@ -208,8 +209,9 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	 */
 	private void dreak() {
 		flog = 2;
-		adapter.setData(data_dreak);
 		initData();
+		adapter.setData(data_dreak);
+		listView.setAdapter(adapter);
 	}
 
 	/**
@@ -217,8 +219,9 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	 */
 	private void eat() {
 		flog = 1;
-		adapter.setData(data_eat);
 		initData();
+		adapter.setData(data_eat);
+		listView.setAdapter(adapter);
 	}
 
 	@Override
