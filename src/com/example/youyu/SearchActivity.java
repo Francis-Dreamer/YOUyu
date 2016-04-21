@@ -21,6 +21,8 @@ public class SearchActivity extends Activity {
 		linear_huanyipi = (LinearLayout) findViewById(R.id.linear_huanyipi);
 		edit_search = (EditText) findViewById(R.id.edit_search);
 		edit_search.addTextChangedListener(new EditChangedListener());
+		
+		
 		linear_huanyipi.setOnClickListener(ocl);
 	}
 
