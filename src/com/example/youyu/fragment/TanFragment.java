@@ -1,18 +1,27 @@
 package com.example.youyu.fragment;
 
+import com.example.youyu.DongtaiActivity;
 import com.example.youyu.R;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+/**
+ * 探的首页
+ * 
+ * @author Administrator
+ *
+ */
 public class TanFragment extends Fragment {
 	View view;
 	TextView text_dengdeng;
@@ -36,6 +45,8 @@ public class TanFragment extends Fragment {
 	RadioButton rbutton_guanxi;
 	RadioButton rbutton_shijian;
 
+	Button button_tan;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.activity_tan, null);
@@ -57,6 +68,8 @@ public class TanFragment extends Fragment {
 
 		gview = (GridView) view.findViewById(R.id.gview);
 
+		button_tan = (Button) view.findViewById(R.id.button_tan);
+
 		radioBtn.setChecked(true);
 		rbutton_renshu.setChecked(true);
 		rbutton_shijian.setChecked(true);
@@ -66,6 +79,7 @@ public class TanFragment extends Fragment {
 		text_dengdeng.setOnClickListener(ocl);
 		text_didian.setOnClickListener(ocl);
 
+		button_tan.setOnClickListener(ocl);
 		return view;
 	}
 
@@ -80,6 +94,11 @@ public class TanFragment extends Fragment {
 				break;
 			case R.id.text_didian:
 				notShown();
+				break;
+			case R.id.button_tan:
+				//点击探跳转到动态页面
+				Intent intent = new Intent(getActivity(), DongtaiActivity.class);
+				startActivity(intent);
 				break;
 			default:
 				break;
