@@ -7,6 +7,7 @@ import com.example.youyu.baseadapter.AllPageFragmentAdapter;
 import com.example.youyu.fragment.NaoFragment;
 import com.example.youyu.fragment.TanFragment;
 import com.example.youyu.fragment.YuFragment;
+import com.example.youyu.util.SharedPreferencesUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -88,16 +90,19 @@ public class AllPageFragmentActivity extends FragmentActivity {
 			Intent intent=new Intent();
 			switch (v.getId()) {
 			case R.id.top_imageview:
-				intent.setClass(AllPageFragmentActivity.this,LoginActivity.class);
-				startActivity(intent);
+				if(checkLogin()){
+					intent.setClass(AllPageFragmentActivity.this,AfterLoginActivity.class);
+				}else{
+					intent.setClass(AllPageFragmentActivity.this,LoginActivity.class);
+				}
 				break;
 			case R.id.image_search:
 				intent.setClass(AllPageFragmentActivity.this, SearchActivity.class);
-				startActivity(intent);
 				break;
 			default:
 				break;
 			}
+			startActivityForResult(intent, 0);
 		}
 	};
 	/**
@@ -140,11 +145,23 @@ public class AllPageFragmentActivity extends FragmentActivity {
 
 		}
 	};
+	
+	/**
+	 * 判断是否登录
+	 * @return
+	 */
+	private  boolean checkLogin(){
+		String tok = SharedPreferencesUtil.getData(getApplicationContext());
+		if(!TextUtils.isEmpty(tok)){
+			return true;
+		}
+		return false;
+	}
+	
 	/**
 	 * 底部菜单点击事件
 	 */
 	OnCheckedChangeListener checkedChangeListener = new OnCheckedChangeListener() {
-
 		@Override
 		public void onCheckedChanged(RadioGroup group, int checkedId) {
 			switch (checkedId) {
