@@ -181,7 +181,6 @@ public class NaoModel {
 		List<NaoModel> data = new ArrayList<NaoModel>();
 		try {
 			JSONObject jsonObject = new JSONObject(json);
-			
 		
 		} catch (JSONException e) {
 			e.printStackTrace();

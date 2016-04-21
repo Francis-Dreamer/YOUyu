@@ -11,37 +11,43 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class DongtaiActivity extends Activity {
 	ListView list_dongtai;
 	DongtaiBaseAdapter dongtaiBaseAdapter;
 	ArrayList<Dongtai_data> list = new ArrayList<Dongtai_data>();
 
-	ImageView image_fanhui;
+	ImageView iv_back,iv_menu;
+	TextView tv_title;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dongtai);
+		
 		list_dongtai = (ListView) findViewById(R.id.list_dongtai);
 		getData();
 		dongtaiBaseAdapter = new DongtaiBaseAdapter(DongtaiActivity.this, list);
 		list_dongtai.setAdapter(dongtaiBaseAdapter);
 
-		image_fanhui = (ImageView) findViewById(R.id.image_fanhui);
-		image_fanhui.setOnClickListener(ocl);
+		iv_back = (ImageView) findViewById(R.id.top_imageview);
+		iv_menu = (ImageView) findViewById(R.id.image_search);
+		iv_menu.setVisibility(View.GONE);
+		iv_back.setOnClickListener(ocl);
+		iv_back.setImageResource(R.drawable.fanhui);
+		
+		tv_title = (TextView) findViewById(R.id.top_title);
+		tv_title.setText("探");
 	}
 
 	OnClickListener ocl = new OnClickListener() {
-
 		@Override
 		public void onClick(View v) {
 			switch (v.getId()) {
-			case R.id.image_fanhui:
+			case R.id.top_imageview:
 				finish();
 				break;
-
 			default:
 				break;
 			}
@@ -50,6 +56,7 @@ public class DongtaiActivity extends Activity {
 
 	public void getData() {
 		Dongtai_data data = new Dongtai_data();
+		
 		data.setImage_ciqiko(R.drawable.ciqiko);
 		data.setText_ciqiko("磁器口");
 		data.setImage_ciqikoyonghutouxiang(R.drawable.ciqikoyonghutouxiang);
@@ -58,7 +65,7 @@ public class DongtaiActivity extends Activity {
 		data.setText_leirong("磁器口，一个古风古韵的地方，这里除了繁华的街景还有");
 		list.add(data);
 
-		Dongtai_data data2 = new Dongtai_data();
+		data = new Dongtai_data();
 		data.setImage_ciqiko(R.drawable.ciqiko);
 		data.setText_ciqiko("磁器口");
 		data.setImage_ciqikoyonghutouxiang(R.drawable.ciqikoyonghutouxiang);
@@ -67,7 +74,7 @@ public class DongtaiActivity extends Activity {
 		data.setText_leirong("磁器口，一个古风古韵的地方，这里除了繁华的街景还有");
 		list.add(data);
 
-		Dongtai_data data3 = new Dongtai_data();
+		data = new Dongtai_data();
 		data.setImage_ciqiko(R.drawable.ciqiko);
 		data.setText_ciqiko("磁器口");
 		data.setImage_ciqikoyonghutouxiang(R.drawable.ciqikoyonghutouxiang);
@@ -76,7 +83,7 @@ public class DongtaiActivity extends Activity {
 		data.setText_leirong("磁器口，一个古风古韵的地方，这里除了繁华的街景还有");
 		list.add(data);
 
-		Dongtai_data data4 = new Dongtai_data();
+		data = new Dongtai_data();
 		data.setImage_ciqiko(R.drawable.ciqiko);
 		data.setText_ciqiko("磁器口");
 		data.setImage_ciqikoyonghutouxiang(R.drawable.ciqikoyonghutouxiang);
@@ -85,7 +92,7 @@ public class DongtaiActivity extends Activity {
 		data.setText_leirong("磁器口，一个古风古韵的地方，这里除了繁华的街景还有");
 		list.add(data);
 
-		Dongtai_data data5 = new Dongtai_data();
+		data = new Dongtai_data();
 		data.setImage_ciqiko(R.drawable.ciqiko);
 		data.setText_ciqiko("磁器口");
 		data.setImage_ciqikoyonghutouxiang(R.drawable.ciqikoyonghutouxiang);
@@ -94,7 +101,7 @@ public class DongtaiActivity extends Activity {
 		data.setText_leirong("磁器口，一个古风古韵的地方，这里除了繁华的街景还有");
 		list.add(data);
 
-		Dongtai_data data6 = new Dongtai_data();
+		data = new Dongtai_data();
 		data.setImage_ciqiko(R.drawable.ciqiko);
 		data.setText_ciqiko("磁器口");
 		data.setImage_ciqikoyonghutouxiang(R.drawable.ciqikoyonghutouxiang);
