@@ -1,5 +1,8 @@
 package com.example.youyu.fragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.youyu.DongtaiActivity;
 import com.example.youyu.R;
 
@@ -14,6 +17,8 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
+import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 /**
@@ -47,10 +52,16 @@ public class TanFragment extends Fragment {
 
 	Button button_tan;
 
+	RelativeLayout rlayout;
+
+	List<String> data_address;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.activity_tan, null);
-		
+
+		data_address = initAddressData();
+
 		text_dengdeng = (TextView) view.findViewById(R.id.text_dengdeng);
 		text_shuangqiao = (TextView) view.findViewById(R.id.text_shuangqiao);
 		linear_otherone = (LinearLayout) view.findViewById(R.id.linear_otherone);
@@ -81,7 +92,75 @@ public class TanFragment extends Fragment {
 		text_didian.setOnClickListener(ocl);
 
 		button_tan.setOnClickListener(ocl);
+
+		rlayout = (RelativeLayout) view.findViewById(R.id.rlayout_tan_address);
+		initAddressView();
+
 		return view;
+	}
+
+	/**
+	 * 加载 重庆地址的 布局
+	 */
+	private void initAddressView() {
+		// 清除 当前 linearlayout 中的所有子控件
+		rlayout.removeAllViews();
+		
+		LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+		for (int i = 0; i < data_address.size(); i++) {
+			TextView textView = new TextView(getActivity().getApplicationContext());
+			textView.setText(data_address.get(i));
+			// 设置tag，区分监听textview的对象
+			textView.setTag(i);
+			textView.setOnClickListener(clickListener);
+			
+			switch (i % 4) {
+			case 0:
+				//第1个textview的位置
+				params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+				textView.setLayoutParams(params);
+				break;
+			case 1:
+				//第2个textview的位置
+				params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+				textView.setLayoutParams(params);
+				break;
+			case 2:
+				//第3个textview的位置
+				params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+				textView.setLayoutParams(params);
+				break;
+			case 3:
+				//第4个textview的位置
+				params.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+				textView.setLayoutParams(params);
+				break;
+			default:
+				break;
+			}
+			// 将当前的textview添加到布局中
+			rlayout.addView(textView);
+		}
+
+	}
+
+	OnClickListener clickListener = new OnClickListener() {
+		@Override
+		public void onClick(View arg0) {
+
+		}
+	};
+
+	/**
+	 * 初始化 地区数据
+	 * 
+	 * @return
+	 */
+	private List<String> initAddressData() {
+		data_address = new ArrayList<String>();
+		data_address.add("");
+
+		return data_address;
 	}
 
 	OnClickListener ocl = new OnClickListener() {
@@ -97,7 +176,7 @@ public class TanFragment extends Fragment {
 				notShown();
 				break;
 			case R.id.button_tan:
-				//点击探跳转到动态页面
+				// 点击探跳转到动态页面
 				Intent intent = new Intent(getActivity(), DongtaiActivity.class);
 				startActivity(intent);
 				break;
