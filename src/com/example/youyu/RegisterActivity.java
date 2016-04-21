@@ -4,9 +4,6 @@ import java.net.MalformedURLException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.youyu.util.HttpPost;
-import com.example.youyu.util.HttpPost.OnSendListener;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +12,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.youyu.util.HttpPost;
+import com.example.youyu.util.HttpPost.OnSendListener;
 
 public class RegisterActivity extends Activity{
 	
@@ -33,11 +33,10 @@ public class RegisterActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_register);
+		
 		application= (DataApplication) getApplication();
 		
 		initView();
-		
-		
 	}
 
 
@@ -59,7 +58,6 @@ public class RegisterActivity extends Activity{
 	
 	
 	OnClickListener clickListener=new OnClickListener() {
-		
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.text_yanzhengma:
@@ -112,7 +110,6 @@ public class RegisterActivity extends Activity{
 		mobile_code=edit_yanzhengma.getText().toString();
 		
 		String url=application.url_top+application.url_type+"reg";
-		
 		try {
 			HttpPost httpPost=HttpPost.parseUrl(url);
 			Map<String, String> map=new HashMap<String, String>();
@@ -123,24 +120,18 @@ public class RegisterActivity extends Activity{
 			httpPost.putMap(map);
 			httpPost.send();
 			httpPost.setOnSendListener(new OnSendListener() {
-				
 				public void start() {
 					
 				}
 				
 				public void end(String result) {
 					Log.e("result", result);
-					
+					finish();
 				}
 			});
-			
-			
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
 	}
 	
 	

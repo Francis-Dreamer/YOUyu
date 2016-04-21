@@ -65,7 +65,7 @@ public class LoginActivity extends Activity{
 				break;
 			case R.id.register:
 				intent=new Intent(LoginActivity.this,RegisterActivity.class);
-				startActivity(intent);
+				startActivityForResult(intent, 0);
 				break;
 			case R.id.back:
 				finish();
