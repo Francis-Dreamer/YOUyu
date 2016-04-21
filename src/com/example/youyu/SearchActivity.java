@@ -15,7 +15,6 @@ public class SearchActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
 		linear_huanyipi = (LinearLayout) findViewById(R.id.linear_huanyipi);
@@ -27,7 +26,6 @@ public class SearchActivity extends Activity {
 	}
 
 	OnClickListener ocl = new OnClickListener() {
-
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub

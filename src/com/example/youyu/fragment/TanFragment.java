@@ -50,6 +50,7 @@ public class TanFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.activity_tan, null);
+		
 		text_dengdeng = (TextView) view.findViewById(R.id.text_dengdeng);
 		text_shuangqiao = (TextView) view.findViewById(R.id.text_shuangqiao);
 		linear_otherone = (LinearLayout) view.findViewById(R.id.linear_otherone);

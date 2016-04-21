@@ -1042,6 +1042,7 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="@dimen/px10"
                 android:background="@drawable/juxing_two"
                 android:text="探"
                 android:textColor="#ffffff"
