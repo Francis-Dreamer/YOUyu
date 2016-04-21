@@ -3,7 +3,11 @@ package com.example.youyu.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.example.youyu.R;
+import com.google.gson.Gson;
 
 public class NaoModel {
 	private String path;
@@ -170,6 +174,20 @@ public class NaoModel {
 		model.path = R.drawable.nao_item3 + "";
 		data.add(model);
 
+		return data;
+	}
+	
+	public static List<NaoModel> getJson(String json){
+		List<NaoModel> data = new ArrayList<NaoModel>();
+		try {
+			JSONObject jsonObject = new JSONObject(json);
+			
+		
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		Gson gson = new Gson();
+		gson.fromJson(json, NaoModel.class);
 		return data;
 	}
 }

@@ -1,5 +1,6 @@
 package com.example.youyu.fragment;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 import android.annotation.SuppressLint;
@@ -18,10 +19,13 @@ import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
+import com.example.youyu.DataApplication;
 import com.example.youyu.NaoItemActivity;
 import com.example.youyu.R;
 import com.example.youyu.adapter.NaoAdapter;
 import com.example.youyu.model.NaoModel;
+import com.example.youyu.util.HttpPost;
+import com.example.youyu.util.HttpPost.OnSendListener;
 
 public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 		OnItemClickListener {
@@ -38,11 +42,22 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	// 滑动 状态
 	private boolean isScroll = false;
 
+	private String url_top = "";
+
 	@SuppressLint("InflateParams")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.activity_nao, null);
+
+		/**
+		 * 获取DataApplication的对象
+		 */
+		DataApplication application = (DataApplication) getActivity()
+				.getApplication();
+		// 获取 url网址
+		url_top = application.url_top + application.url_type
+				+ application.url_Nao;
 
 		initData();
 
@@ -59,6 +74,26 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 		data_dreak = NaoModel.getData();
 		data_play = NaoModel.getData();
 		data_happy = NaoModel.getData();
+		
+		try {
+			HttpPost httpPost = HttpPost.parseUrl(url_top);
+			httpPost.putString("sort", flog+"");
+			httpPost.send();
+			httpPost.setOnSendListener(new OnSendListener() {
+				@Override
+				public void start() {
+					
+				}
+				@Override
+				public void end(String result) {
+					Log.i("Nao ----> result", result);
+					
+				}
+			});
+		
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -93,7 +128,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 				break;
 			}
 		}
-
+		
 		@Override
 		public void onScroll(AbsListView view, int firstVisibleItem,
 				int visibleItemCount, int totalItemCount) {
@@ -153,8 +188,10 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	 * 乐
 	 */
 	private void happy() {
+		initData();
 		flog = 4;
 		adapter.setData(data_happy);
+		
 	}
 
 	/**
@@ -163,6 +200,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	private void play() {
 		flog = 3;
 		adapter.setData(data_play);
+		initData();
 	}
 
 	/**
@@ -171,6 +209,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	private void dreak() {
 		flog = 2;
 		adapter.setData(data_dreak);
+		initData();
 	}
 
 	/**
@@ -179,6 +218,7 @@ public class NaoFragment extends Fragment implements OnCheckedChangeListener,
 	private void eat() {
 		flog = 1;
 		adapter.setData(data_eat);
+		initData();
 	}
 
 	@Override
