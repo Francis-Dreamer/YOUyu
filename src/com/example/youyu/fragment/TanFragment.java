@@ -136,7 +136,7 @@ public class TanFragment extends Fragment {
 				textView.setLayoutParams(params);
 				break;
 			default:
-				break;
+				break; 
 			}
 			// 将当前的textview添加到布局中
 			rlayout.addView(textView);
